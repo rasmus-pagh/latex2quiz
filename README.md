@@ -2,7 +2,9 @@
 
 `latex2quiz.py` converts the multiple-choice and written parts of the existing
 exam LaTeX format into a QTI 2.1 item-bank package for Canvas, or into
-WISEflow's native item format (Learnosity item JSON). The source format
+WISEflow's native item format (Learnosity item JSON). It can also print a
+problem set as PDFs with one question per page, with and without answers.
+The source format
 in `ad-exams/danish/` and `dma-exams/danish/` works without a migration. Any
 external file referenced with commands such as `\includegraphics` must also be
 present.
@@ -56,6 +58,25 @@ python3 latex2quiz.py --preamble my-exam-preamble.tex questions.tex
 ```
 
 Run `python3 latex2quiz.py --help` for all options.
+
+### PDFs with one question per page
+
+```sh
+# Write ad-problems-june-2025-without-answers.pdf and
+# ad-problems-june-2025-with-answers.pdf next to the problem set.
+python3 latex2quiz.py --format pdf ad-exams/danish/ad-problems-june-2025.tex
+
+# English labels, and the PDFs in another folder.
+python3 latex2quiz.py --format pdf --language en -o pdfs ad-exams/english/ad-problems-june-2025.tex
+```
+
+Every multiple-choice question and every written problem starts on a new page;
+a long problem continues onto the next. The header shows the problem file's
+name and the page number. The version with answers also says "Med svar"
+("With answers") in the header, ticks the correct choices, and prints the
+explanations (leave them out with `--no-feedback`). The PDFs contain only the
+problems; use the folder's `template.tex` for an exam with a front page.
+`--language` sets the language of the header and labels (default `da`).
 
 ### WISEflow JSON (Learnosity items)
 
@@ -222,6 +243,7 @@ implementation is divided by responsibility under `latex2quiz_lib/`:
 - `htmltext.py` converts LaTeX fragments to HTML with MathJax delimiters.
 - `learnosity.py` builds WISEflow's Learnosity item JSON.
 - `package.py` renders, validates, and writes the ZIP package and JSON file.
+- `pdf.py` writes the PDFs with one question per page.
 - `cli.py` implements command-line validation and reporting.
 - `model.py` contains the shared immutable data structures and errors.
 

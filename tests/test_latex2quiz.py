@@ -5,6 +5,7 @@ import json
 import re
 import struct
 import shutil
+import subprocess
 import tempfile
 import unittest
 import uuid
@@ -820,8 +821,90 @@ class LearnosityTests(unittest.TestCase):
                 latex2quiz.main(["--essay-template", "missing.json", "--format", "learnosity", str(source)])
 
 
+
+class PdfDocumentTests(unittest.TestCase):
+    def _document(self, with_answers, language="da"):
+        questions, _ = latex2quiz.parse_questions(SAMPLE)
+        sections = latex2quiz.parse_written_sections(SAMPLE)
+        return latex2quiz.pdf_document_source(
+            SAMPLE, "my_exam.tex", questions, sections, with_answers, language
+        )
+
+    def test_one_page_per_question_and_written_problem(self):
+        document = self._document(False)
+        # Two MC questions and one written problem: two page breaks.
+        self.assertEqual(2, document.count(r"\clearpage"))
+        self.assertIn(r"\fancyhead[L]{\texttt{my\_exam.tex}}", document)
+        self.assertIn(r"\fancyhead[R]{Side \thepage}", document)
+        self.assertIn(r"\section*{Proofs (6\%)}", document)
+        self.assertIn(r"\textbf{b)}\quad Prove the second claim.", document)
+
+    def test_answers_only_in_the_version_with_answers(self):
+        without = self._document(False)
+        with_answers = self._document(True)
+        for text in (r"\checkmark", "Because $1+1=2$.", "First solution.", "Med svar"):
+            self.assertNotIn(text, without)
+            self.assertIn(text, with_answers)
+        self.assertEqual(3, with_answers.count(r"\ensuremath{\checkmark}"))
+
+    def test_english_labels(self):
+        document = self._document(True, "en")
+        self.assertIn(r"\fancyhead[R]{Page \thepage}", document)
+        self.assertIn(r"\textbf{Answer:}", document)
+        self.assertIn("With answers", document)
+
+    def test_output_paths(self):
+        self.assertEqual(
+            (Path("a/x-without-answers.pdf"), Path("a/x-with-answers.pdf")),
+            latex2quiz.pdf_output_paths(Path("a/x.tex")),
+        )
+        self.assertEqual(
+            (Path("out/x-without-answers.pdf"), Path("out/x-with-answers.pdf")),
+            latex2quiz.pdf_output_paths(Path("a/x.tex"), Path("out")),
+        )
+
 @unittest.skipUnless(shutil.which("pdflatex") and shutil.which("pdftoppm"), "LaTeX tools unavailable")
 class RenderingIntegrationTests(unittest.TestCase):
+    def test_pdf_versions_with_and_without_answers(self):
+        source = r"""
+\multiplechoicestart
+\spoergsmaal{Two plus two}
+What is $2+2$?
+\etsvar
+\mulighederstart
+\svar 3
+\svar 4 \korrekt
+\mulighederslut
+\forklaring{Count.}
+\spoergsmaal{Letters}
+Pick a vowel.
+\fleresvar
+\mulighederstart
+\svar A \korrekt
+\svar B
+\mulighederslut
+\multiplechoiceslut
+\section{Written proof}
+\punkt{a)}{Prove the claim.}
+\forklaring{By induction.}
+"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            input_path = root / "exam.tex"
+            input_path.write_text(source, encoding="utf-8")
+            self.assertEqual(
+                0, latex2quiz.main([str(input_path), "--format", "pdf", "-o", str(root / "out")])
+            )
+            for name in ("exam-without-answers.pdf", "exam-with-answers.pdf"):
+                data = (root / "out" / name).read_bytes()
+                self.assertTrue(data.startswith(b"%PDF"))
+                if shutil.which("pdfinfo"):
+                    info = subprocess.run(
+                        ["pdfinfo", str(root / "out" / name)],
+                        capture_output=True, text=True, check=True,
+                    ).stdout
+                    self.assertRegex(info, r"Pages:\s+3\n", name)
+
     def test_convert_minimal_exam(self):
         source = r"""
 \multiplechoicestart

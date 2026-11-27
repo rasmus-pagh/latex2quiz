@@ -53,21 +53,24 @@ def _png_dimensions(path: Path) -> Tuple[int, int]:
     return struct.unpack(">II", data[16:24])
 
 
-def render_document_source(
-    source: str, requests: Sequence[RenderRequest], extra_preamble: str = ""
-) -> str:
-    """The LaTeX document that renders ``requests`` with one page per request.
-
-    The preamble is the source's own (or the default one for a fragment),
-    followed by command definitions made in the body and ``extra_preamble``.
-    """
+def document_preamble(source: str, extra_preamble: str = "") -> str:
+    """The preamble for a document built from ``source``: the source's own (or
+    the default one for a fragment), followed by command definitions made in
+    the body and ``extra_preamble``."""
     preamble = _extract_preamble(source)
     body_definitions = _extract_body_command_definitions(source)
     if body_definitions:
         preamble += "\n" + body_definitions
     if extra_preamble:
         preamble += "\n" + extra_preamble
-    return _render_document(preamble, requests)
+    return preamble
+
+
+def render_document_source(
+    source: str, requests: Sequence[RenderRequest], extra_preamble: str = ""
+) -> str:
+    """The LaTeX document that renders ``requests`` with one page per request."""
+    return _render_document(document_preamble(source, extra_preamble), requests)
 
 
 def render_resolutions(

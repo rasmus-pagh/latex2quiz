@@ -8,7 +8,7 @@ const PDFJS_WORKER = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf
 // Every module of latex2quiz_lib (tests/test_latex2quiz.py checks this list).
 const PYTHON_MODULES = [
   '__init__', 'alttext', 'cli', 'htmltext', 'learnosity', 'model', 'package',
-  'qti', 'render', 'source',
+  'pdf', 'qti', 'render', 'source',
 ];
 const BUSYTEX = new URL('vendor/busytex/', location.href).href;
 // The small bundle holds only the TeX Live files the exams need (built by

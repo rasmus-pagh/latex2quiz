@@ -50,6 +50,7 @@ from latex2quiz_lib.alttext import (
 from latex2quiz_lib.render import (
     _render_document,
     _png_dimensions,
+    document_preamble,
     render_document_source,
     render_resolutions,
     store_rendered_pages,
@@ -169,6 +170,19 @@ from latex2quiz_lib.package import (
     build_learnosity_bank,
     _write_json,
     convert,
+)
+
+from latex2quiz_lib.pdf import (
+    PDF_LABELS,
+    _LATEX_SPECIALS,
+    _latex_escape,
+    _labels,
+    pdf_output_paths,
+    _mc_page,
+    _written_page,
+    pdf_document_source,
+    compile_pdf,
+    convert_pdf,
 )
 
 from latex2quiz_lib.cli import (

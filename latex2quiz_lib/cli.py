@@ -10,14 +10,15 @@ from typing import Optional, Sequence
 
 from .model import ConversionError
 from .package import convert
+from .pdf import convert_pdf
 from .source import parse_questions, parse_written_sections
 
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
             "Convert exam LaTeX multiple-choice and written questions to a "
-            "QTI ZIP for Canvas, or to WISEflow's native "
-            "Learnosity item JSON."
+            "QTI ZIP for Canvas, to WISEflow's native Learnosity item JSON, "
+            "or to printable PDFs with one question per page."
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent(
@@ -48,11 +49,13 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("input", type=Path, help="input .tex file")
     parser.add_argument(
         "--format",
-        choices=("qti", "learnosity", "both"),
+        choices=("qti", "learnosity", "both", "pdf"),
         default="qti",
         help=(
             "qti writes a QTI 2.1 package; learnosity writes WISEflow's "
-            "Learnosity item JSON; both writes both (default: qti)"
+            "Learnosity item JSON; both writes both; pdf writes "
+            "<input>-without-answers.pdf and <input>-with-answers.pdf, with "
+            "one question per page (default: qti)"
         ),
     )
     parser.add_argument(
@@ -61,7 +64,9 @@ def _parser() -> argparse.ArgumentParser:
         type=Path,
         help=(
             "output file: the QTI .zip, or the .json file with --format "
-            "learnosity (defaults: <input>-qti.zip and <input>-learnosity.json)"
+            "learnosity, or the folder for the PDFs with --format pdf "
+            "(defaults: <input>-qti.zip, <input>-learnosity.json, and the "
+            "input's folder)"
         ),
     )
     parser.add_argument(
@@ -169,6 +174,27 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             )
             for warning in warnings:
                 print(f"warning: {warning}", file=sys.stderr)
+            return 0
+
+        if args.format == "pdf":
+            if args.json_output or args.essay_template:
+                parser.error("--json-output and --essay-template are not used with --format pdf")
+            if args.output is not None and args.output.exists() and not args.output.is_dir():
+                parser.error("with --format pdf, -o names a folder for the PDFs")
+            without_path, with_path, mc_count, written_count = convert_pdf(
+                input_path,
+                language=args.language,
+                points=args.points,
+                include_feedback=not args.no_feedback,
+                extra_preamble=(
+                    args.preamble.read_text(encoding="utf-8") if args.preamble else ""
+                ),
+                output_dir=args.output,
+            )
+            print(
+                f"Wrote {without_path} and {with_path} with {mc_count} "
+                f"multiple-choice questions and {written_count} written problems"
+            )
             return 0
 
         default_zip = input_path.with_name(input_path.stem + "-qti.zip")
