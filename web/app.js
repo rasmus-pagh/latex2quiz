@@ -1,7 +1,7 @@
 // Browser front end for latex2quiz: the Python implementation runs unchanged
 // in Pyodide; LaTeX is compiled by BusyTeX (TeX Live in WebAssembly) in a
-// worker, and pdf.js turns the PDF pages into PNG images. The page either
-// shows the problems (the default) or offers the converted files for download.
+// worker, and pdf.js turns the PDF pages into PNG images. The page shows the
+// problems as soon as the files are selected, and exports them on request.
 'use strict';
 
 const PYODIDE_INDEX = 'https://cdn.jsdelivr.net/pyodide/v0.27.2/full/';
@@ -260,19 +260,8 @@ function writeUploads() {
   for (const [name, bytes] of uploaded) fs.writeFile(`${WORK}/${name}`, bytes);
 }
 
-function report(result, started) {
-  if (result.stdout) log(result.stdout);
-  if (result.stderr) log(result.stderr);
-  if (result.code === 0) setStatus(`Done in ${seconds(started)}.`, 'ok');
-  else setStatus('Failed: see the messages below.', 'error');
-}
-
-async function check() {
-  const started = performance.now();
-  await withBusy(async () => {
-    writeUploads();
-    report(await runCommand([mainFile(), '--check', '--language', $('language').value]), started);
-  });
+function errorText(error) {
+  return String(error && error.message ? error.message : error);
 }
 
 // ------------------------------------------------------- problems in the page
@@ -282,6 +271,7 @@ const imageUrls = [];
 function clearProblems() {
   for (const url of imageUrls.splice(0)) URL.revokeObjectURL(url);
   $('problems').textContent = '';
+  $('export-status').textContent = '';
   $('preview').hidden = true;
 }
 
@@ -333,90 +323,145 @@ function showProblems(result) {
     }
     $('problems').append(sheet);
   }
+  $('preview-title').textContent = $('main').value;
   $('preview').hidden = false;
-  $('preview').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// The status panel is shown while the page works and when something fails;
+// once the problems are shown it is hidden again.
+const CONTROLS = ['files', 'main', 'language', 'export-qti', 'export-wiseflow'];
+
+async function withBusy(action) {
+  for (const id of CONTROLS) $(id).disabled = true;
+  try {
+    return await action();
+  } finally {
+    for (const id of CONTROLS) $(id).disabled = false;
+  }
 }
 
 async function show() {
+  if (!bridge || !$('main').value) return;
   const started = performance.now();
+  $('result').hidden = false;
+  $('log').textContent = '';
+  setStatus('Typesetting the problems…');
+  clearProblems();
   await withBusy(async () => {
-    writeUploads();
-    $('downloads').textContent = '';
-    clearProblems();
-    const result = await runBridge(() => bridge.preview(mainFile(), $('language').value));
-    report(result, started);
-    if (result.code === 0) showProblems(result);
-  });
-}
-
-async function convert() {
-  if ($('format').value === 'preview') return show();
-  const started = performance.now();
-  await withBusy(async () => {
-    writeUploads();
-    $('downloads').textContent = '';
-    clearProblems();
-    const input = mainFile();
-    const result = await runCommand([input, '--format', $('format').value, '--language', $('language').value]);
-    report(result, started);
-    if (result.code !== 0) return;
-    const stem = input.replace(/\.tex$/, '');
-    for (const [suffix, type] of [['-qti.zip', 'application/zip'], ['-learnosity.json', 'application/json']]) {
-      const path = stem + suffix;
-      if (!pyodide.FS.analyzePath(path).exists) continue;
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(new Blob([pyodide.FS.readFile(path)], { type }));
-      link.download = path.slice(WORK.length + 1);
-      link.textContent = `Download ${link.download}`;
-      $('downloads').append(link);
+    try {
+      writeUploads();
+      const result = await runBridge(() => bridge.preview(mainFile(), $('language').value));
+      if (result.code !== 0) {
+        setStatus('The problem set could not be shown:', 'error');
+        log((result.stderr || '') + (result.stdout || ''));
+        return;
+      }
+      showProblems(result);
+      if (result.stderr) {
+        setStatus(`Shown in ${seconds(started)}, with warnings:`);
+        log(result.stderr);
+      } else {
+        $('result').hidden = true;
+      }
+    } catch (error) {
+      setStatus('The problem set could not be shown:', 'error');
+      log(errorText(error));
     }
   });
 }
 
-async function withBusy(action) {
-  for (const id of ['check', 'convert', 'files']) $(id).disabled = true;
-  $('log').textContent = '';
-  setStatus('Working…');
-  try {
-    await action();
-  } catch (error) {
-    setStatus('Failed: see the messages below.', 'error');
-    log(String(error && error.message ? error.message : error));
-  } finally {
-    for (const id of ['check', 'convert', 'files']) $(id).disabled = false;
-  }
+const EXPORTS = {
+  qti: { suffix: '-qti.zip', type: 'application/zip', name: 'QTI' },
+  learnosity: { suffix: '-learnosity.json', type: 'application/json', name: 'WISEflow' },
+};
+
+// Convert with the command line and hand the file to the browser as a download.
+async function exportAs(format) {
+  const { suffix, type, name } = EXPORTS[format];
+  const started = performance.now();
+  $('export-status').textContent = `Exporting to ${name}…`;
+  await withBusy(async () => {
+    try {
+      writeUploads();
+      const input = mainFile();
+      const result = await runCommand([input, '--format', format, '--language', $('language').value]);
+      if (result.code !== 0) throw new Error((result.stderr || '') + (result.stdout || ''));
+      const path = input.replace(/\.tex$/, '') + suffix;
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(new Blob([pyodide.FS.readFile(path)], { type }));
+      link.download = path.slice(WORK.length + 1);
+      document.body.append(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(link.href), 60000);
+      $('export-status').textContent = `Saved ${link.download} (${seconds(started)}).`;
+    } catch (error) {
+      $('export-status').textContent = `Export to ${name} failed; see the messages above.`;
+      $('result').hidden = false;
+      $('log').textContent = '';
+      setStatus(`Export to ${name} failed:`, 'error');
+      log(errorText(error));
+    }
+  });
+}
+
+// The problem set is the .tex file with the multiple-choice section; the
+// other .tex files are ones it includes. The chooser appears only if several
+// files qualify. The language follows the macro names unless changed.
+const PROBLEM_SET = /^[ \t]*\\multiplechoicestart\b/m;
+const ENGLISH = /\\(question|multiplechoiceend|optionsstart)\b/;
+
+function chooseProblemSet() {
+  const decoder = new TextDecoder();
+  const texFiles = [...uploaded.keys()].filter(name => name.endsWith('.tex')).sort();
+  const sources = new Map(texFiles.map(name => [name, decoder.decode(uploaded.get(name))]));
+  let candidates = texFiles.filter(name => PROBLEM_SET.test(sources.get(name)));
+  if (!candidates.length) candidates = texFiles;
+  const select = $('main');
+  select.textContent = '';
+  for (const name of candidates) select.append(new Option(name, name));
+  $('main-choice').hidden = candidates.length < 2;
+  detectLanguage(sources);
+  return candidates.length > 0;
+}
+
+function detectLanguage(sources) {
+  const source = sources.get($('main').value);
+  if (source !== undefined) $('language').value = ENGLISH.test(source) ? 'en' : 'da';
 }
 
 $('files').addEventListener('change', async event => {
   uploaded.clear();
   for (const file of event.target.files) uploaded.set(file.name, new Uint8Array(await file.arrayBuffer()));
-  const texFiles = [...uploaded.keys()].filter(name => name.endsWith('.tex')).sort();
-  const select = $('main');
-  select.textContent = '';
-  for (const name of texFiles) select.append(new Option(name, name));
-  const preferred = texFiles.find(name => /^(ad|dma)-/.test(name));
-  if (preferred) select.value = preferred;
-  select.disabled = texFiles.length === 0;
-  if (!texFiles.length) select.append(new Option('No .tex file selected'));
-  const ready = texFiles.length > 0 && bridge !== null;
-  $('check').disabled = $('convert').disabled = !ready;
+  clearProblems();
+  if (!chooseProblemSet()) {
+    $('result').hidden = false;
+    $('log').textContent = '';
+    setStatus('No .tex file selected.', 'error');
+    return;
+  }
+  if (bridge) await show();
+  else setStatus('Loading Python…');
 });
 
-$('check').addEventListener('click', check);
-$('convert').addEventListener('click', convert);
-// Browsers restore form fields on reload, so the labels follow the fields.
-function syncControls() {
-  $('convert').textContent = $('format').value === 'preview' ? 'Show' : 'Convert';
+$('main').addEventListener('change', () => {
+  detectLanguage(new Map([[$('main').value, new TextDecoder().decode(uploaded.get($('main').value))]]));
+  show();
+});
+$('language').addEventListener('change', show);
+$('export-qti').addEventListener('click', () => exportAs('qti'));
+$('export-wiseflow').addEventListener('click', () => exportAs('learnosity'));
+// Browsers restore form fields on reload, so the display follows the fields.
+function syncAnswers() {
   $('problems').classList.toggle('with-answers', $('answers').checked);
 }
-$('format').addEventListener('change', syncControls);
-$('answers').addEventListener('change', syncControls);
-syncControls();
+$('answers').addEventListener('change', syncAnswers);
+syncAnswers();
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER;
 initPython().then(() => {
   setStatus('Ready. Select the files of a problem set.');
-  if (uploaded.size) $('check').disabled = $('convert').disabled = false;
+  if (uploaded.size && $('main').value) show();
 }).catch(error => {
   setStatus('Python failed to load.', 'error');
   log(String(error));

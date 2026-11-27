@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exam converter</title>
+<title>Exam viewer</title>
 <style>
   :root {
     --bg: #f7f7f5; --panel: #ffffff; --text: #1d1d1b; --muted: #66665f;
@@ -42,10 +42,12 @@
   }
   button.secondary { background: transparent; color: var(--accent); }
   button:disabled { opacity: 0.45; cursor: default; }
-  .actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+  .actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+  #export-status { margin: 0; }
   #status { font-weight: 600; margin: 0 0 8px; }
   #status.error { color: var(--error); }
   #status.ok { color: var(--ok); }
+  #log:empty { display: none; }
   #log {
     background: var(--log-bg); border: 1px solid var(--border); border-radius: 6px; padding: 10px;
     font: 12.5px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap;
@@ -75,29 +77,18 @@
 </head>
 <body>
 <main>
-  <h1>Exam converter</h1>
-  <p class="lede">Shows the problems of a LaTeX exam, or converts it to a QTI package for Canvas or a WISEflow JSON item bank, entirely in your browser. Prototype.</p>
+  <h1>Exam viewer</h1>
+  <p class="lede">Shows the problems of a LaTeX exam and exports them to Canvas (QTI) or WISEflow, entirely in your browser. Prototype.</p>
 
   <section>
-    <h2>1. Files</h2>
+    <h2>Files</h2>
     <label for="files">Problem set and the files it uses</label>
-    <input id="files" type="file" multiple accept=".tex,.pdf,.png,.jpg,.jpeg,.json">
-    <p class="hint">Select the <code>.tex</code> file plus any figures it includes (e.g. <code>ad-problems-2024-april-figs.pdf</code>).</p>
-    <label for="main">Problem set</label>
-    <select id="main" disabled><option>No files selected</option></select>
-  </section>
-
-  <section>
-    <h2>2. Output</h2>
+    <input id="files" type="file" multiple accept=".tex,.pdf,.png,.jpg,.jpeg">
+    <p class="hint">Select the problem set's <code>.tex</code> file plus any files it includes, such as figures (<code>ad-problems-2024-april-figs.pdf</code>) or <code>skriftlige.tex</code>.</p>
     <div class="row">
-      <div>
-        <label for="format">Output</label>
-        <select id="format">
-          <option value="preview" selected>Show the problems here</option>
-          <option value="learnosity">WISEflow JSON</option>
-          <option value="qti">QTI package for Canvas</option>
-          <option value="both">Both</option>
-        </select>
+      <div id="main-choice" hidden>
+        <label for="main">Problem set</label>
+        <select id="main"></select>
       </div>
       <div>
         <label for="language">Language</label>
@@ -107,23 +98,22 @@
         </select>
       </div>
     </div>
-    <div class="actions">
-      <button id="check" class="secondary" disabled>Check</button>
-      <button id="convert" disabled>Show</button>
-    </div>
   </section>
 
-  <section>
-    <h2>3. Result</h2>
+  <section id="result">
     <p id="status">Loading Python…</p>
     <pre id="log"></pre>
-    <div id="downloads"></div>
   </section>
 
   <section id="preview" hidden>
     <div class="preview-head">
-      <h2>4. Problems</h2>
+      <h2 id="preview-title">Problems</h2>
       <label class="toggle"><input id="answers" type="checkbox" checked> Show answers</label>
+    </div>
+    <div class="actions">
+      <button id="export-qti" class="secondary">Export to QTI</button>
+      <button id="export-wiseflow" class="secondary">Export to WISEflow</button>
+      <span id="export-status" class="hint" role="status"></span>
     </div>
     <div id="problems" class="with-answers"></div>
   </section>

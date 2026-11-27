@@ -175,19 +175,20 @@ python3 -m http.server 8000
 ```
 
 Select the problem set together with the files it uses (figure PDFs,
-`skriftlige.tex`), choose the output and language, and press **Check** or
-**Show**. By default the page shows the problems itself, one sheet per
-problem, typeset by LaTeX: the question, its choices, and the explanation.
-**Show answers** switches the marks on the correct choices and the
-explanations on and off without compiling again. This takes about 5 seconds
-for a whole exam once TeX is loaded.
+`skriftlige.tex`). The page finds the problem set among them (the `.tex` file
+with `\multiplechoicestart`; a chooser appears only if several files have
+one), guesses the language from the macro names, and shows the problems right
+away, one sheet per problem, typeset by LaTeX: the question, its choices and
+the explanation. **Show answers** switches the marks on the correct choices
+and the explanations on and off without compiling again. A whole exam takes
+about 5 seconds once TeX is loaded. The status panel is visible only while
+the page works or when something fails.
 
-The other outputs are the QTI package and the WISEflow JSON; the button then
-reads **Convert** and the page offers the files for download. The output
-matches the command line: the QTI XML and the image sizes are identical, and
-the images differ only in anti-aliasing. Converting an AD exam takes about
-5–10 seconds, and a QTI conversion right after showing the problems reuses
-their images.
+**Export to QTI** and **Export to WISEflow** download the converted files.
+They match the command line: the QTI XML and the image sizes are identical,
+and the images differ only in anti-aliasing. The QTI export reuses the images
+already shown, so it takes well under a second; the WISEflow export renders
+its figures at a higher resolution and takes a second or two.
 
 The page loads only the small bundle, so the first conversion downloads about
 45 MB (mostly the 30 MB TeX engine); the browser caches it. If a document
