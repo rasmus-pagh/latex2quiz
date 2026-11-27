@@ -76,3 +76,9 @@ the 4th edition. Section numbers below are from the 4th edition.
 - Parallel algorithms: work, span, parallelism and greedy scheduling (Ch. 26)
 - Computational geometry: convex hulls with Graham's scan, and closest pair of
   points (3rd edition Ch. 33, online in the 4th edition)
+
+## License
+
+Copyright (c) 2026 Mikkel Abrahamsen, Rasmus Pagh, Amir Yehudayoff.
+The problems are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see [LICENSE](LICENSE).

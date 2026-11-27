@@ -60,3 +60,9 @@ and Stein, *Introduction to Algorithms* (CLRS).
 - Breadth-first search and strongly connected components
 - Dijkstra's algorithm for shortest paths
 - Kruskal's algorithm for minimum spanning trees
+
+## License
+
+Copyright (c) 2026 Mikkel Abrahamsen, Rasmus Pagh, Amir Yehudayoff.
+The problems are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see [LICENSE](LICENSE).

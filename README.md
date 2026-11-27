@@ -375,3 +375,11 @@ only built-in grading alternative, but that removes all partial credit.
 The package is intentionally a QTI 2.1 item bank. Exam settings such as time
 limits, appendix tools, release rules, item order, and total grading policy
 remain platform settings and are not inferred from the LaTeX document.
+
+## License
+
+The software is licensed under the MIT License, copyright Rasmus Pagh; see
+[LICENSE](LICENSE). The exam problems in `ad-exams/` and `dma-exams/` are
+copyright Mikkel Abrahamsen, Rasmus Pagh and Amir Yehudayoff and licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see the LICENSE file
+in each folder.
