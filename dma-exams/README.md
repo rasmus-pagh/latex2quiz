@@ -18,9 +18,9 @@ sets.
 
 | File | Exam |
 |---|---|
-| `dma-problems-trial-2026.tex` | Trial exam, 2026 |
-| `dma-problems-january-2026.tex` | Exam, January 2026 |
-| `dma-problems-april-2026.tex` | Re-exam, April 2026 |
+| `dma-problems-2026-trial.tex` | Trial exam, 2026 |
+| `dma-problems-2026-january.tex` | Exam, January 2026 |
+| `dma-problems-2026-april.tex` | Re-exam, April 2026 |
 
 Each exam consists of 25 multiple-choice questions worth 4 points each, so a
 perfect answer gives 100 points. Each question says whether it has exactly

@@ -211,8 +211,8 @@ class ParserTests(unittest.TestCase):
             )
             counts[path.name] = len(questions)
         self.assertEqual(8, len(counts))
-        self.assertEqual(9, counts["ad-problems-trial-2023.tex"])
-        self.assertTrue(all(count == 18 for name, count in counts.items() if name != "ad-problems-trial-2023.tex"))
+        self.assertEqual(9, counts["ad-problems-2023-trial.tex"])
+        self.assertTrue(all(count == 18 for name, count in counts.items() if name != "ad-problems-2023-trial.tex"))
 
         written_section_counts = {
             path.name: len(latex2quiz.parse_written_sections(path.read_text(encoding="utf-8")))
@@ -220,14 +220,14 @@ class ParserTests(unittest.TestCase):
         }
         self.assertEqual(
             {
-                "ad-problems-june-2024.tex": 4,
-                "ad-problems-april-2023.tex": 4,
-                "ad-problems-april-2024.tex": 3,
-                "ad-problems-april-2026.tex": 3,
-                "ad-problems-june-2025.tex": 3,
-                "ad-problems-june-2026.tex": 3,
-                "ad-problems-march-2025.tex": 3,
-                "ad-problems-trial-2023.tex": 4,
+                "ad-problems-2024-june.tex": 4,
+                "ad-problems-2023-april.tex": 4,
+                "ad-problems-2024-april.tex": 3,
+                "ad-problems-2026-april.tex": 3,
+                "ad-problems-2025-june.tex": 3,
+                "ad-problems-2026-june.tex": 3,
+                "ad-problems-2025-march.tex": 3,
+                "ad-problems-2023-trial.tex": 4,
             },
             written_section_counts,
         )
@@ -272,9 +272,9 @@ class ParserTests(unittest.TestCase):
             counts[path.name] = (len(questions), len(latex2quiz.parse_written_sections(text)))
         self.assertEqual(
             {
-                "dma-problems-april-2026.tex": (25, 0),
-                "dma-problems-january-2026.tex": (25, 0),
-                "dma-problems-trial-2026.tex": (25, 0),
+                "dma-problems-2026-april.tex": (25, 0),
+                "dma-problems-2026-january.tex": (25, 0),
+                "dma-problems-2026-trial.tex": (25, 0),
             },
             counts,
         )

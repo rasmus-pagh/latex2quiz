@@ -34,17 +34,17 @@ On macOS, MacTeX supplies `pdflatex`, and `brew install poppler` supplies
 Generate a QTI 2.1 package for Canvas with:
 
 ```sh
-python3 latex2quiz.py ad-exams/danish/ad-problems-june-2025.tex
+python3 latex2quiz.py ad-exams/danish/ad-problems-2025-june.tex
 ```
 
-This writes `ad-exams/danish/ad-problems-june-2025-qti.zip`. Choose QTI 2.1 when the
+This writes `ad-exams/danish/ad-problems-2025-june-qti.zip`. Choose QTI 2.1 when the
 importer asks for a version.
 
 Useful options include:
 
 ```sh
 # Parse and validate only; this does not require LaTeX.
-python3 latex2quiz.py --check ad-exams/danish/ad-problems-june-2025.tex
+python3 latex2quiz.py --check ad-exams/danish/ad-problems-2025-june.tex
 
 # Change the default score and shuffle MC choices.
 python3 latex2quiz.py --points 4 --shuffle -o exam-qti.zip exam.tex
@@ -62,12 +62,12 @@ Run `python3 latex2quiz.py --help` for all options.
 ### PDFs with one question per page
 
 ```sh
-# Write ad-problems-june-2025-without-answers.pdf and
-# ad-problems-june-2025-with-answers.pdf next to the problem set.
-python3 latex2quiz.py --format pdf ad-exams/danish/ad-problems-june-2025.tex
+# Write ad-problems-2025-june-without-answers.pdf and
+# ad-problems-2025-june-with-answers.pdf next to the problem set.
+python3 latex2quiz.py --format pdf ad-exams/danish/ad-problems-2025-june.tex
 
 # English labels, and the PDFs in another folder.
-python3 latex2quiz.py --format pdf --language en -o pdfs ad-exams/english/ad-problems-june-2025.tex
+python3 latex2quiz.py --format pdf --language en -o pdfs ad-exams/english/ad-problems-2025-june.tex
 ```
 
 Every multiple-choice question and every written problem starts on a new page;
@@ -85,11 +85,11 @@ imported into the content bank with partial-credit scoring, essay points, and
 item titles intact:
 
 ```sh
-# Write ad-exams/danish/ad-problems-june-2025-learnosity.json instead of a QTI package.
-python3 latex2quiz.py --format learnosity ad-exams/danish/ad-problems-june-2025.tex
+# Write ad-exams/danish/ad-problems-2025-june-learnosity.json instead of a QTI package.
+python3 latex2quiz.py --format learnosity ad-exams/danish/ad-problems-2025-june.tex
 
 # Write both formats; -o names the ZIP and --json-output the JSON.
-python3 latex2quiz.py --format both --json-output bank.json ad-exams/danish/ad-problems-june-2025.tex
+python3 latex2quiz.py --format both --json-output bank.json ad-exams/danish/ad-problems-2025-june.tex
 
 # Use WISEflow's own essay question type, copied from an export of any item
 # bank made in the target WISEflow environment.
@@ -207,7 +207,7 @@ log.
 Each course has a folder, `ad-exams/` (Algorithms and Data Structures) and
 `dma-exams/` (Discrete Mathematics and Algorithms), with the Danish originals
 in `danish/` and machine translations in `english/`. A problem set is named
-`<course>-problems-<month>-<year>.tex` (trial exams `<course>-problems-trial-<year>.tex`)
+`<course>-problems-<year>-<month>.tex` (trial exams `<course>-problems-<year>-trial.tex`)
 and has the same name in both languages. Problem files contain only the
 problems, without a preamble or front page; every file whose name starts with
 `ad-` or `dma-` is a problem set, and the tests read all of them. Other `.tex`

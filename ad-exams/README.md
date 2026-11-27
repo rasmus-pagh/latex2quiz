@@ -16,14 +16,14 @@ the templates, the macros, and how to convert a problem set to QTI or WISEflow.
 
 | File | Exam |
 |---|---|
-| `ad-problems-trial-2023.tex` | Trial exam, March 2023 |
-| `ad-problems-april-2023.tex` | Exam, April 2023 |
-| `ad-problems-april-2024.tex` | Exam, April 2024 |
-| `ad-problems-june-2024.tex` | Exam, June 2024 |
-| `ad-problems-march-2025.tex` | Exam, March 2025 |
-| `ad-problems-june-2025.tex` | Exam, June 2025 |
-| `ad-problems-april-2026.tex` | Exam, April 2026 |
-| `ad-problems-june-2026.tex` | Exam, June 2026 |
+| `ad-problems-2023-trial.tex` | Trial exam, March 2023 |
+| `ad-problems-2023-april.tex` | Exam, April 2023 |
+| `ad-problems-2024-april.tex` | Exam, April 2024 |
+| `ad-problems-2024-june.tex` | Exam, June 2024 |
+| `ad-problems-2025-march.tex` | Exam, March 2025 |
+| `ad-problems-2025-june.tex` | Exam, June 2025 |
+| `ad-problems-2026-april.tex` | Exam, April 2026 |
+| `ad-problems-2026-june.tex` | Exam, June 2026 |
 
 Each exam has two parts:
 
