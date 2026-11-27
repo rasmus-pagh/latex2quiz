@@ -1,0 +1,127 @@
+% Skabelon til PDF-udgaven af en DMA-eksamen.
+% Kopiér filen (fx til reexam-april-2026.tex), og ret indstillingerne nedenfor.
+% Fjern %-tegnet foran \answerstrue for at lave udgaven med svar og forklaringer.
+\documentclass[12pt]{article}
+\newif\ifanswers
+
+% ===== Indstillinger for den konkrete eksamen =====
+%\answerstrue % med svar og forklaringer
+\newcommand{\examdate}{17. april 2026}
+\newcommand{\examduration}{2 timer}
+\newcommand{\problemfile}{dma-problems-april-2026} % opgavefil i denne mappe, uden .tex
+% ==================================================
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows,arrows.meta,automata,backgrounds,calc,
+  decorations.pathmorphing,decorations.pathreplacing,fit,matrix,patterns,
+  positioning,shapes,shapes.geometric,trees}
+\usepackage{calc}
+\usepackage{fancybox}
+\usepackage{clrscode3e}
+\usepackage{totcount}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\pagenumbering{gobble}
+
+% Antal opgaver: hvert \spoergsmaal er en \section.
+\regtotcounter{section}
+
+\newcounter{svarside}
+\setcounter{svarside}{1}
+\regtotcounter{svarside}
+
+\newcommand{\svarside}{\addtocounter{svarside}{1}%
+Skriv dit svar på side \thesvarside\ i Word dokumentet.
+}
+
+\newcommand{\punkt}[2]{\vspace{.3cm}\noindent\begin{Sbox}
+    \begin{minipage}{16cm}\textbf{#1} \xspace {#2}\xspace\svarside\end{minipage}\end{Sbox}\fbox{\TheSbox}\\
+    \vspace{.1cm}
+    \noindent
+    }
+
+\tikzset{
+  treenode/.style = {align=center, inner sep=0pt, text centered,
+    font=\sffamily,text=white},
+  black/.style = {treenode, circle, white, font=\sffamily\bfseries, draw=black,
+    fill=black, text width=1.5em},
+  red/.style = {treenode, circle, white, draw=red,
+    fill=red, text width=1.5em, very thick},
+  white/.style = {treenode, rectangle, draw=none,
+    minimum width=0.5em, minimum height=0.5em},
+  gray/.style = {treenode, rectangle, draw=black,
+    minimum width=0.5em, minimum height=0.5em}
+}
+
+\newcommand{\spoergsmaal}[1]{\section{#1\mcprocent}}
+\newcommand{\nylinie}{\\}
+\newcommand{\multiplechoicestart}{}
+\newcommand{\multiplechoiceslut}{}
+\newcommand{\mulighederstart}{\begin{enumerate}}
+\newcommand{\mulighederslut}{\end{enumerate}}
+\newcommand{\svar}{\item}
+\newcommand{\itxsvar}[1]{} % For ITX, ignore in LaTeX
+\newcommand{\qtipoints}[1]{} % For QTI/WISEflow, ignore in LaTeX
+\newcommand{\etsvar}{Der er præcis ét korrekt svar, men det er tilladt at vælge flere svar hvis du er i tvivl.\xspace}
+\newcommand{\fleresvar}{Vælg ét eller flere korrekte svar.\xspace}
+\newcommand{\mcprocent}{\xspace (4\%)}
+
+\ifanswers
+\newcommand{\korrekt}{\checkmark}
+\newcommand{\medsvar}{{\bf Opgaver med vejledende svar}\\}
+\newcommand{\forklaring}[1]{{\bf Svar: }{#1}}
+\newcommand{\sideskift}{}
+\else
+\newcommand{\korrekt}{}
+\newcommand{\medsvar}{}
+\newcommand{\forklaring}[1]{}
+\newcommand{\sideskift}{\newpage}
+\fi
+
+\begin{document}
+
+\title{\Large \medsvar Eksamen i Diskret Matematik og Algoritmer\\
+{\small NDAB15008U}}
+
+\author{Københavns Universitet}
+\date{\examdate}
+
+\maketitle
+
+\section*{Instruktioner}
+
+Du har \examduration\ til at besvare \total{section} opgaver, beskrevet nedenfor.
+Bedømmelsen baseres på det samlede antal point.
+Hver opgave kan give op til 4 point, så en perfekt besvarelse giver \the\numexpr 4*\totvalue{section}\relax\ point.
+%Opgavesættet har \pageref{page:last} nummererede sider.
+% CLRS refererer til kursets lærebog, Introduction to Algorithms, 4th edition.
+
+\medskip
+
+Skriftlige hjælpemidler samt brug af lokalt installeret software er tilladt. Det er \emph{ikke} tilladt at tilgå internet eller at kommunikere med andre.
+
+\medskip
+
+Alle opgaver besvares i ITX systemets multiple-choice-modul.
+I hvert multiple-choice spørgsmål er det enten angivet at der er præcis ét korrekt svar eller at der er en \emph{mængde} af ét eller flere korrekte svar.
+I begge tilfælde er det tilladt at vælge mere end ét svar.
+Ved retning af multiple-choice opgaver gives der negative point for forkerte svar.
+Eksempler:
+\begin{itemize}
+\item Opgave X har 8 svarmuligheder, hvoraf 4 er korrekte. Hvert kryds ved en korrekt svarmulighed giver 1 point, og hvert kryds ved en forkert svarmulighed giver $-1$ point. Hvis du fx sætter kryds ved alle de korrekte svarmuligheder og én forkert svarmulighed får du 3 point.
+\item Opgave Y har 3 svarmuligheder, hvoraf 1 er korrekt. Kryds ved den korrekte svarmulighed giver 4 point, og kryds ved en forkert svarmulighed giver $-2$ point.
+\end{itemize}
+Hvis du ikke sætter nogen krydser får du altid 0 point, og sætter du krydser ved alle svarmuligheder får du også altid 0 point.
+
+\newpage
+
+\input{\problemfile}
+
+\end{document}

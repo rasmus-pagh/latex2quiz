@@ -1,0 +1,122 @@
+#!/usr/bin/env python3
+"""List the TeX Live files the browser version needs, in web/texlive-files.txt.
+
+Builds the render document for every problem set in ad-exams/ and dma-exams/
+(both output formats), compiles it with the local pdflatex while recording
+the files it reads, and looks those files up by name in BusyTeX's package
+bundles (downloaded by web/setup.py).  web/setup.py then packs exactly these
+files into a small bundle.  Run this again when an exam starts using a LaTeX
+package that the others do not; until then, the page falls back to the full
+bundles when it can.
+"""
+from __future__ import annotations
+
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+WEB = Path(__file__).resolve().parent
+ROOT = WEB.parent
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(WEB))
+
+from latex2quiz_lib import package, render  # noqa: E402
+from latex2quiz_lib.source import parse_questions, parse_written_sections  # noqa: E402
+from texbundle import Package  # noqa: E402
+
+FULL_BUNDLES = [
+    "texlive-basic",
+    "ubuntu-texlive-latex-base",
+    "ubuntu-texlive-latex-recommended",
+    "ubuntu-texlive-latex-extra",
+    "ubuntu-texlive-science",
+]
+# Always needed: the program file and system files BusyTeX expects, kpathsea's
+# configuration and file databases, the pdfLaTeX format, and pdfTeX's font map.
+ALWAYS = [
+    "/bin/busytex",
+    "/etc/passwd",
+    "/etc/fonts/fonts.conf",
+    "/texlive/texmf.cnf",
+    "/texlive/texmf-dist/web2c/texmf.cnf",
+    "/texlive/texmf-dist/ls-R",
+    "/texlive/texmf-dist/texmf-config/ls-R",
+    "/texlive/texmf-dist/texmf-var/ls-R",
+    "/texlive/texmf-dist/texmf-var/web2c/pdftex/pdflatex.fmt",
+    "/texlive/texmf-dist/texmf-var/fonts/map/pdftex/updmap/pdftex.map",
+]
+# Supplied separately by web/setup.py (texmf-extra.json), not from the bundles.
+EXTRA_MARKERS = ("/pgf/", "/preview/", "/cm-super/")
+
+
+def render_document(path: Path) -> str:
+    source = path.read_text(encoding="utf-8")
+    questions, _ = parse_questions(source)
+    sections = parse_written_sections(source)
+    requests = package._render_requests(questions, sections, True, "da", 4.0)
+    fragments = package._html_fragments(source, questions, sections, True, "da", False, True, 4.0)
+    requests += package._figure_requests(fragments)
+    return render.render_document_source(source, requests)
+
+
+def recorded_inputs(problem_sets) -> set:
+    names = set()
+    with tempfile.TemporaryDirectory(prefix="latex2quiz-files-") as temporary:
+        build = Path(temporary)
+        for path in problem_sets:
+            tex = build / "render.tex"
+            tex.write_text(render_document(path), encoding="utf-8")
+            result = subprocess.run(
+                ["pdflatex", "-recorder", "-interaction=nonstopmode", "-halt-on-error", tex.name],
+                cwd=build, capture_output=True, text=True,
+                env={**__import__("os").environ, "TEXINPUTS": str(path.parent) + "//:"},
+            )
+            if result.returncode != 0:
+                sys.exit(f"pdflatex failed on the render document of {path}")
+            for line in (build / "render.fls").read_text(encoding="utf-8", errors="replace").splitlines():
+                if not line.startswith("INPUT "):
+                    continue
+                name = line[len("INPUT "):]
+                if name.startswith(str(build)) or name.startswith("./") or str(ROOT) in name:
+                    continue
+                if any(marker in name for marker in EXTRA_MARKERS) or name.endswith("texmf.cnf"):
+                    continue
+                names.add(name.rsplit("/", 1)[-1])
+            print(f"recorded {path.relative_to(ROOT)}", flush=True)
+    return names
+
+
+def main() -> None:
+    problem_sets = sorted(ROOT.glob("ad-exams/*/ad-*.tex")) + sorted(ROOT.glob("dma-exams/*/dma-*.tex"))
+    names = recorded_inputs(problem_sets)
+    # pdfTeX reads the metrics of every font LaTeX loads, but the outlines only
+    # of fonts that end up in the PDF; include the outlines of them all.
+    names |= {name[: -len(".tfm")] + ".pfb" for name in names if name.endswith(".tfm")}
+    vendor = WEB / "vendor" / "busytex"
+    files = set(ALWAYS)
+    found = set()
+    for bundle in FULL_BUNDLES:
+        for filename in Package(vendor / f"{bundle}.js").files:
+            name = filename.rsplit("/", 1)[-1]
+            if name in names:
+                files.add(filename)
+                found.add(name)
+    missing = sorted(
+        name for name in names - found - {"texfonts.map", "render.tex", "render.aux"}
+        if not name.endswith(".pfb")  # fonts without outlines (e.g. TS1) are supplied separately
+    )
+    if missing:
+        print("not in the bundles (supplied elsewhere or optional):", ", ".join(missing))
+    out = WEB / "texlive-files.txt"
+    out.write_text(
+        "# TeX Live files the browser version packs into its small bundle.\n"
+        "# Generated by web/update_tex_files.py; paths are inside BusyTeX's file system.\n"
+        + "".join(f"{name}\n" for name in sorted(files)),
+        encoding="utf-8",
+    )
+    print(f"Wrote {out} with {len(files)} files")
+
+
+if __name__ == "__main__":
+    main()

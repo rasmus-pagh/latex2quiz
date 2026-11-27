@@ -1,0 +1,136 @@
+% Template for the PDF version of an Algorithms and Data Structures exam.
+% Machine translated from the Danish original, ../danish/template.tex
+% Copy this file (e.g. to exam-june-2026.tex) and adjust the settings below.
+% Remove the % in front of \answerstrue for the version with answers and explanations.
+% Every \placeholder{...} describes information to fill in for a specific exam.
+% The instructions for the written problems are in written.tex, which the problem
+% file inputs with \input{written} after \section*{Written problems}.
+\documentclass[12pt]{article}
+\newif\ifanswers
+
+% ===== Settings for a specific exam =====
+%\answerstrue % with answers and explanations
+\newcommand{\placeholder}[1]{\textit{[#1]}}
+\newcommand{\examdate}{\placeholder{Exam date}}
+\newcommand{\examduration}{\placeholder{duration of the exam}}
+\newcommand{\problemfile}{ad-problems-june-2026} % problem file in this folder, without .tex
+% ========================================
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows,arrows.meta,automata,backgrounds,calc,
+  decorations.pathmorphing,decorations.pathreplacing,fit,matrix,patterns,
+  positioning,shapes,shapes.geometric,trees}
+\usepackage{calc}
+\usepackage{fancybox}
+\usepackage{clrscode3e}
+\usepackage{totcount}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% Number of problems: every \question and every written problem is a \section.
+\regtotcounter{section}
+
+\newcounter{answerpage}
+\setcounter{answerpage}{1}
+\regtotcounter{answerpage}
+
+\newcommand{\answerpage}{\addtocounter{answerpage}{1}%
+\placeholder{Where to write the answer, e.g.\ page \theanswerpage\ of the answer document.}
+}
+
+\newcommand{\subquestion}[2]{\vspace{.3cm}\noindent\begin{Sbox}
+    \begin{minipage}{16cm}\textbf{#1} \xspace {#2}\xspace\answerpage\end{minipage}\end{Sbox}\fbox{\TheSbox}\\
+    \vspace{.1cm}
+    \noindent
+    }
+
+\tikzset{
+  treenode/.style = {align=center, inner sep=0pt, text centered,
+    font=\sffamily,text=white},
+  black/.style = {treenode, circle, white, font=\sffamily\bfseries, draw=black,
+    fill=black, text width=1.5em},
+  red/.style = {treenode, circle, white, draw=red,
+    fill=red, text width=1.5em, very thick},
+  white/.style = {treenode, rectangle, draw=none,
+    minimum width=0.5em, minimum height=0.5em},
+  gray/.style = {treenode, rectangle, draw=black,
+    minimum width=0.5em, minimum height=0.5em}
+}
+
+\newcommand{\question}[1]{\section{#1\mcpercent}}
+\newcommand{\multiplechoicestart}{}
+\newcommand{\multiplechoiceend}{}
+\newcommand{\optionsstart}{\begin{enumerate}}
+\newcommand{\optionsend}{\end{enumerate}}
+\newcommand{\answer}{\item}
+\newcommand{\itxanswer}[1]{} % For ITX, ignore in LaTeX
+\newcommand{\qtipoints}[1]{} % For QTI/WISEflow, ignore in LaTeX
+\newcommand{\oneanswer}{There is exactly one correct answer, but you may select more than one answer if you are in doubt.\xspace}
+\newcommand{\multipleanswers}{Select one or more correct answers.\xspace}
+\newcommand{\mcpercent}{\xspace (4\%)}
+
+\ifanswers
+\newcommand{\correct}{\checkmark}
+\newcommand{\withanswers}{{\bf Problems with suggested answers}\\}
+\newcommand{\explanation}[1]{{\bf Answer: }{#1}}
+\newcommand{\pageshift}{}
+\else
+\newcommand{\correct}{}
+\newcommand{\withanswers}{}
+\newcommand{\explanation}[1]{}
+\newcommand{\pageshift}{\newpage}
+\fi
+
+\begin{document}
+
+\title{\Large \withanswers Exam in Algorithms and Data Structures\\
+{\small \placeholder{Course code}}}
+
+\author{\placeholder{Institution}}
+\date{\examdate}
+
+\maketitle
+
+\section*{Instructions}
+
+You have \examduration\ to solve the \total{section} problems described below.
+\placeholder{How the grade is determined, e.g.\ from the total number of points (the weight of each problem is stated).}
+The problem set has \pageref{page:last} numbered pages.
+CLRS refers to the course textbook, Introduction to Algorithms, \placeholder{edition}.
+
+\medskip
+
+\placeholder{Permitted aids, e.g.\ written material and locally installed software, and whether internet access and communication with others are allowed.}
+
+\medskip
+
+\placeholder{How the multiple-choice answers are submitted, e.g.\ the exam system used.}
+Each multiple-choice question states either that there is exactly one correct answer or that there is a \emph{set} of one or more correct answers.
+In both cases you may select more than one answer.
+When multiple-choice problems are graded, wrong answers give negative points.
+Examples:
+\begin{itemize}
+\item Problem X has 8 options, 4 of which are correct.
+Each check mark at a correct option gives 1 point, and each check mark at a wrong option gives $-1$ point.
+If, for example, you check all the correct options and one wrong option, you get 3 points.
+\item Problem Y has 5 options, 1 of which is correct.
+A check mark at the correct option gives 4 points, and a check mark at a wrong option gives $-1$ point.
+\end{itemize}
+If you do not check any options you always get 0 points, and if you check all options you also always get 0 points.
+
+\medskip
+
+The answer to the written problems must have \total{answerpage} pages: a front page and one page for each subquestion.
+
+\newpage
+
+\input{\problemfile}
+
+\end{document}
