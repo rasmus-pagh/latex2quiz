@@ -12,6 +12,11 @@ Each folder has a `template.tex` that turns a problem set into a complete
 exam PDF, with or without answers. The [main README](../README.md) describes
 the templates, the macros, and how to convert a problem set to QTI or WISEflow.
 
+Next to each problem set are the files generated from it with `latex2quiz.py`:
+`-qti.zip` (QTI 2.1 for Canvas), `-learnosity.json` (WISEflow), and
+`-without-answers.pdf` / `-with-answers.pdf` (one question per page).
+Regenerate them after changing a problem set.
+
 ## Problem sets
 
 | File | Exam |

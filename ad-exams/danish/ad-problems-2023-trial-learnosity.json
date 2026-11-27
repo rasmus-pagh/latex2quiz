@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "reference": "192879ca-ddcd-476a-963c-f8c3aed2d912",
+      "reference": "ab8528f1-5040-4f1f-aaec-1abf1415af38",
       "title": "MergeSort og sammenligninger (4%)",
       "description": "",
       "stimulus": " ",
@@ -12,7 +12,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "b730bb5c-60f8-423f-839c-aa5cc03d5ce1",
+            "reference": "4faf62bb-5edd-46c5-83c6-3fa72d3a0b8c",
             "widget_type": "response"
           }
         ]
@@ -22,7 +22,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "b730bb5c-60f8-423f-839c-aa5cc03d5ce1",
+          "reference": "4faf62bb-5edd-46c5-83c6-3fa72d3a0b8c",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -82,7 +82,7 @@
       "labels": []
     },
     {
-      "reference": "f4d2cb13-d92d-459c-8c6a-ad4af4247f1e",
+      "reference": "ffe1c484-1133-4ce7-8b98-1f90589f8307",
       "title": "MergeSort (4%)",
       "description": "",
       "stimulus": " ",
@@ -93,7 +93,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "decb787f-229a-4c28-b55d-f9e0c97bb7a7",
+            "reference": "24d39a9c-ecbf-497a-b9d1-9416de76cc90",
             "widget_type": "response"
           }
         ]
@@ -103,7 +103,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "decb787f-229a-4c28-b55d-f9e0c97bb7a7",
+          "reference": "24d39a9c-ecbf-497a-b9d1-9416de76cc90",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -150,7 +150,7 @@
             },
             "is_math": true,
             "metadata": {
-              "distractor_rationale": "<p>Antal elementer i hvert kald af mergesort, opdelt efter rekursionsniveau, er: 21; 10, 11;5, 5, 5, 6; 2, 3, 2, 3, 2, 3, 3, 3; 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1. Antal kald er altså \\(1+2+4+8+16+10 = 41\\). Alternativt kan man se at antal indre knuder i et binært træ med 21 blade altid er \\(2\\cdot 21 - 1 = 41\\).</p>"
+              "distractor_rationale": "<p>Antal elementer i hvert kald af mergesort, opdelt efter rekursionsniveau, er: 21; 10, 11;5, 5, 5, 6; 2, 3, 2, 3, 2, 3, 3, 3; 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1. Antal kald er altså \\(1+2+4+8+16+10 = 41\\). Alternativt kan man se at det totale antal knuder i et binært træ med 21 blade, hvor alle indre knuder har to børn, altid er \\(2\\cdot 21 - 1 = 41\\).</p>"
             }
           },
           "metadata": {
@@ -163,7 +163,7 @@
       "labels": []
     },
     {
-      "reference": "402f9ce5-bed6-4d3b-b219-a7f34fce4888",
+      "reference": "09ef8493-0ec1-4648-8668-5ec7ba3d8f41",
       "title": "Korteste-veje træ (4%)",
       "description": "",
       "stimulus": " ",
@@ -174,7 +174,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "aa2334ab-900c-433e-a274-d7dd8c1e628c",
+            "reference": "1b19ebbc-893f-4760-9090-5aa069eed48a",
             "widget_type": "response"
           }
         ]
@@ -184,7 +184,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "aa2334ab-900c-433e-a274-d7dd8c1e628c",
+          "reference": "1b19ebbc-893f-4760-9090-5aa069eed48a",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -202,7 +202,7 @@
                 "value": "2"
               },
               {
-                "label": "Hvis alle vægte er unikke indeholder \\(G'\\) af de \\(|E'|\\) kanter i \\(G\\), der har lavest vægt.",
+                "label": "Hvis alle vægte er unikke indeholder \\(G'\\) de \\(|E'|\\) kanter i \\(G\\), der har lavest vægt.",
                 "value": "3"
               },
               {
@@ -232,7 +232,7 @@
             },
             "is_math": true,
             "metadata": {
-              "distractor_rationale": "<p>\\(G'\\) forbinder kun \\(s\\) med de knuder knuder i \\(V\\) hvortil der findes en vej i \\(G\\). Der er kun udgående kanter fra \\(s\\) fordi træet ikke har nogen cykler. \\(G'\\) er et træ, og derfor er antal kanter lig med antal knuder minus 1. En lav vægt er ikke en garanti for at være med i en korteste vej fra \\(s\\) — for eksempel kan visse kanter ikke nås fra&nbsp;\\(s\\).</p>"
+              "distractor_rationale": "<p>\\(G'\\) forbinder kun \\(s\\) med de knuder i \\(V\\) hvortil der findes en vej i \\(G\\). Der er kun udgående kanter fra \\(s\\) fordi træet ikke har nogen cykler. \\(G'\\) er et træ, og derfor er antal kanter lig med antal knuder minus 1. En lav vægt er ikke en garanti for at være med i en korteste vej fra \\(s\\) — for eksempel kan visse kanter ikke nås fra&nbsp;\\(s\\).</p>"
             }
           },
           "metadata": {
@@ -245,7 +245,7 @@
       "labels": []
     },
     {
-      "reference": "52f2391f-fa37-4ca9-8c00-4117b0285a2e",
+      "reference": "db4d63a4-e63b-4ff2-bec1-ad26a06c1b5b",
       "title": "Korteste veje (4%)",
       "description": "",
       "stimulus": " ",
@@ -256,7 +256,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "27381e5d-f10f-4763-9b04-b67cedbabb9e",
+            "reference": "887bb0d5-0538-469d-b281-5ff45a174264",
             "widget_type": "response"
           }
         ]
@@ -266,7 +266,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "27381e5d-f10f-4763-9b04-b67cedbabb9e",
+          "reference": "887bb0d5-0538-469d-b281-5ff45a174264",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -354,7 +354,7 @@
       "labels": []
     },
     {
-      "reference": "fd6fde9b-41d2-447c-9850-5a97745bc934",
+      "reference": "758f838d-709c-4a8b-8103-bae3560b6675",
       "title": "Mindste udspændende træ (4%)",
       "description": "",
       "stimulus": " ",
@@ -365,7 +365,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "4187d565-4986-4b52-88c7-f19c0011cd90",
+            "reference": "9b8ccc88-f485-4955-b62e-a5c129869eae",
             "widget_type": "response"
           }
         ]
@@ -375,7 +375,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "4187d565-4986-4b52-88c7-f19c0011cd90",
+          "reference": "9b8ccc88-f485-4955-b62e-a5c129869eae",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -446,7 +446,7 @@
             },
             "is_math": true,
             "metadata": {
-              "distractor_rationale": "<p>Mindste udspændende træ kan findes ved at køre fx Kruskál's eller Prim's algoritme og giver det angivne input (som i dette tilfælde er unikt).</p>"
+              "distractor_rationale": "<p>Mindste udspændende træ kan findes ved at køre fx Kruskal's eller Prim's algoritme og giver det angivne output (som i dette tilfælde er unikt).</p>"
             }
           },
           "metadata": {
@@ -459,7 +459,7 @@
       "labels": []
     },
     {
-      "reference": "24d0ff9b-744e-4dd0-b1ea-b43da2c942d4",
+      "reference": "c1d98b81-1d5c-4cf3-a402-2937d3544d57",
       "title": "Rød-sorte søgetræer (4%)",
       "description": "",
       "stimulus": " ",
@@ -470,7 +470,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "94a616cf-e881-406f-9000-3b874e092618",
+            "reference": "36172dca-f4e7-43f4-a49d-832c9e7c0a3e",
             "widget_type": "response"
           }
         ]
@@ -480,7 +480,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "94a616cf-e881-406f-9000-3b874e092618",
+          "reference": "36172dca-f4e7-43f4-a49d-832c9e7c0a3e",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -540,7 +540,7 @@
       "labels": []
     },
     {
-      "reference": "1fccfe2d-9491-4cd6-a1bd-801e56b69332",
+      "reference": "dbf2f9a6-8735-49b8-82b9-ada078219044",
       "title": "Køretid for rød-sorte søgetræer (4%)",
       "description": "",
       "stimulus": " ",
@@ -551,7 +551,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "5680d4a1-3c3c-4dc7-90f0-ee0182f546ad",
+            "reference": "33b91b83-5350-4ba8-962b-f7508cc02808",
             "widget_type": "response"
           }
         ]
@@ -561,7 +561,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "5680d4a1-3c3c-4dc7-90f0-ee0182f546ad",
+          "reference": "33b91b83-5350-4ba8-962b-f7508cc02808",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -614,7 +614,7 @@
             },
             "is_math": true,
             "metadata": {
-              "distractor_rationale": "<p>Hver operation tager mindst konstant tid, så den samlede tid er \\(\\Omega(n)\\). Antal knuder \\(n\\) i træet er på ethvert tidspunkt højst \\(n_1 \\leq N\\). Hver operation tager altså højst \\(O(\\lg N)\\) tid, så den samlede tid er \\(O(n \\lg N)\\). I værste fald tager søgeoperationerne tid \\(\\Omega(\\lg n_1)\\), dvs.&nbsp;tid \\(\\Omega(n_3\\lg n_1)\\) totalt, og tiden kan altså ikke begrænses af \\(O(n_3 + (n_1 + n_2) \\lg N)\\). Et rød-sort binært søgetræ kan have blade i dybde 2, bladenes dybde er ikke større end \\(\\lfloor \\lg(n_3 + 1)\\rfloor\\) generelt. Sorte knuder kan optræde på alle niveauer.</p>"
+              "distractor_rationale": "<p>Hver operation tager mindst konstant tid, så den samlede tid er \\(\\Omega(N)\\). Antal knuder \\(n\\) i træet er på ethvert tidspunkt højst \\(n_1 \\leq N\\). Hver operation tager altså højst \\(O(\\lg N)\\) tid, så den samlede tid er \\(O(N \\lg N)\\). I værste fald tager søgeoperationerne tid \\(\\Omega(\\lg n_1)\\), dvs.&nbsp;tid \\(\\Omega(n_3\\lg n_1)\\) totalt, og tiden kan altså ikke begrænses af \\(O(n_3 + (n_1 + n_2) \\lg N)\\). Et rød-sort binært søgetræ kan have blade i dybde 2 uanset værdien af \\(n_3\\), så bladene er generelt ikke i dybde mindst \\(\\lfloor \\lg(n_3 + 1)\\rfloor\\). Sorte knuder kan optræde på alle niveauer.</p>"
             }
           },
           "metadata": {
@@ -627,7 +627,7 @@
       "labels": []
     },
     {
-      "reference": "3f8d38b0-bc5e-45f0-ba53-76d2a145ff67",
+      "reference": "ae6cc994-9418-4d55-b7dc-744f6d3cb15d",
       "title": "Amortiseret analyse (4%)",
       "description": "",
       "stimulus": " ",
@@ -638,7 +638,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "1a6486c1-dd47-4b59-8688-cbcf64aa01ac",
+            "reference": "9e25d728-c737-421c-82a8-26d59232e39b",
             "widget_type": "response"
           }
         ]
@@ -648,7 +648,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "1a6486c1-dd47-4b59-8688-cbcf64aa01ac",
+          "reference": "9e25d728-c737-421c-82a8-26d59232e39b",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -701,7 +701,7 @@
             },
             "is_math": true,
             "metadata": {
-              "distractor_rationale": "<p>\\(\\Phi_i = 2\\cdot num_i - size_i\\), hvor \\(num_i = i\\) og \\(size_i \\geq 1\\) er den aktuelle kapacitet. Vi har altid \\(\\Phi_i \\leq i/2\\), så \\(\\Phi_i=O(i)\\), men lige efter en tabeludvidelse har vi \\(\\Phi_i \\leq 2\\), dvs.&nbsp;det gælder ikke at \\(\\Phi_i = \\Omega(i)\\). Lige efter en tabeludvidelse har vi \\(\\Phi_{i} &lt; \\Phi_{i-1}\\). Potentialfunktionen er defineret så den er ikke-negativ, og den er positiv fra første skridt og fremefter.</p>"
+              "distractor_rationale": "<p>\\(\\Phi_i = 2\\cdot num_i - size_i\\), hvor \\(num_i = i\\) og \\(size_i \\geq 1\\) er den aktuelle kapacitet. Vi har altid \\(\\Phi_i \\leq i\\), så \\(\\Phi_i=O(i)\\), men lige efter en tabeludvidelse har vi \\(\\Phi_i \\leq 2\\), dvs.&nbsp;det gælder ikke at \\(\\Phi_i = \\Omega(i)\\). Lige efter en tabeludvidelse har vi \\(\\Phi_{i} &lt; \\Phi_{i-1}\\). Potentialfunktionen er defineret så den er ikke-negativ, og den er positiv fra første skridt og fremefter.</p>"
             }
           },
           "metadata": {
@@ -714,7 +714,7 @@
       "labels": []
     },
     {
-      "reference": "cff89137-45da-45e6-942e-6da237f431aa",
+      "reference": "4886990c-f655-4ffb-8d85-be34b8b867a9",
       "title": "Del og hersk (4%)",
       "description": "",
       "stimulus": " ",
@@ -725,7 +725,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "1f4a19b9-c4ff-4d9e-b8f2-0d64ad9033c2",
+            "reference": "5bac1f7b-8c2b-4b64-8c8d-6a4dad869b67",
             "widget_type": "response"
           }
         ]
@@ -735,7 +735,7 @@
         {
           "type": "mcq",
           "widget_type": "response",
-          "reference": "1f4a19b9-c4ff-4d9e-b8f2-0d64ad9033c2",
+          "reference": "5bac1f7b-8c2b-4b64-8c8d-6a4dad869b67",
           "data": {
             "minScore": 0,
             "multiple_responses": true,
@@ -788,7 +788,7 @@
             },
             "is_math": true,
             "metadata": {
-              "distractor_rationale": "<p>De fire første rekursionsligninger kan løses ved hjælp af master theorem, hvor nummer 1 og 3 falder i henholdsvis tilfælde 1 og 3 som giver \\(T(n) = \\Theta(n^2)\\). De sidste ligninger kan løses med substitutionsmetoden. I ligning 5 er der \\(n\\) led hvor halvdelen har størrelse mindst \\((n/2)^2 = n^4/4\\), så \\(T(n)=\\Omega(n^3)\\). I ligning 5 er der \\(n\\) led af størrelse højst&nbsp;\\(n\\), hvor halvdelen har størrelse mindst \\(n/2\\), så \\(T(n)=\\Theta(n^2)\\).</p>"
+              "distractor_rationale": "<p>De fire første rekursionsligninger kan løses ved hjælp af master theorem, hvor nummer 1 og 3 falder i henholdsvis tilfælde 1 og 3 som giver \\(T(n) = \\Theta(n^2)\\). De sidste ligninger kan løses med substitutionsmetoden. I ligning 5 er der \\(n\\) led hvor halvdelen har størrelse mindst \\((n/2)^2 = n^2/4\\), så \\(T(n)=\\Omega(n^3)\\). I ligning 6 er der \\(n\\) led af størrelse højst&nbsp;\\(n\\), hvor halvdelen har størrelse mindst \\(n/2\\), så \\(T(n)=\\Theta(n^2)\\).</p>"
             }
           },
           "metadata": {
@@ -801,7 +801,7 @@
       "labels": []
     },
     {
-      "reference": "cdcf6ef2-0ef5-4adb-927c-7429657f6b0f",
+      "reference": "6ad6779e-0194-44f7-85a2-09d42db21aae",
       "title": "Huffman tree (4%)",
       "description": "",
       "stimulus": " ",
@@ -812,7 +812,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "d9d207a4-9c12-4cad-9161-4c749c76ffef",
+            "reference": "72f81ccb-c8f8-4877-aaa8-315f62637e11",
             "widget_type": "response"
           }
         ]
@@ -820,55 +820,14 @@
       "status": "published",
       "questions": [
         {
-          "type": "custom",
+          "type": "longtextV2",
           "widget_type": "response",
-          "reference": "d9d207a4-9c12-4cad-9161-4c749c76ffef",
+          "reference": "72f81ccb-c8f8-4877-aaa8-315f62637e11",
           "data": {
-            "css": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.css",
-            "custom": {
-              "formatting_options": [
-                {
-                  "option": "appearance"
-                },
-                {
-                  "option": "formatting"
-                },
-                {
-                  "option": "coloring"
-                },
-                {
-                  "option": "alignment"
-                },
-                {
-                  "option": "lists"
-                },
-                {
-                  "option": "undo_redo"
-                },
-                {
-                  "option": "search_replace"
-                },
-                {
-                  "option": "clear_formatting"
-                }
-              ],
-              "languages": [
-                []
-              ],
-              "show_current_word_count": "always",
-              "show_maximum_words": "always"
-            },
-            "custom_type": "custom_type_long_essay_spell_check",
-            "height": 550,
-            "js": {
-              "question": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.js",
-              "scorer": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/scorer.js"
-            },
-            "type": "custom",
-            "width": 750,
-            "version": "0.0.1",
-            "stimulus": "<h3>Huffman tree (4%)</h3><p>Vi betragter algoritmen til konstruktion af Huffman koder i CLRS sektion 16.3.</p><p><b>a)</b>&nbsp;&nbsp;Tegn Huffman træet som algoritmen beregner for alfabetet \\(C =\\{a, b, c, d, e\\}\\) med frekvenser \\(f_a=5\\), \\(f_b=8\\), \\(f_c=3\\), \\(f_d=7\\), \\(f_e=1\\). Det er ikke nødvendigt at angive labels (0 og 1) på kanterne, men angiv frekvenser i blade såvel som indre knuder (se eksempel i CLRS figur&nbsp;16.4).</p>",
+            "type": "longtextV2",
             "is_math": true,
+            "max_length": 100000,
+            "stimulus": "<h3>Huffman tree (4%)</h3><p>Vi betragter algoritmen til konstruktion af Huffman koder i CLRS sektion 16.3.</p><p><b>a)</b>&nbsp;&nbsp;Tegn Huffman træet som algoritmen beregner for alfabetet \\(C =\\{a, b, c, d, e\\}\\) med frekvenser \\(f_a=5\\), \\(f_b=8\\), \\(f_c=3\\), \\(f_d=7\\), \\(f_e=1\\). Det er ikke nødvendigt at angive labels (0 og 1) på kanterne, men angiv frekvenser i blade såvel som indre knuder (se eksempel i CLRS figur&nbsp;16.4).</p>",
             "validation": {
               "max_score": 4
             },
@@ -877,7 +836,7 @@
             }
           },
           "metadata": {
-            "name": "Essay (med stavekontrol)"
+            "name": "Essay with rich text"
           }
         }
       ],
@@ -886,7 +845,7 @@
       "labels": []
     },
     {
-      "reference": "c4f10598-390a-43c8-bfd7-3e0164b1b698",
+      "reference": "04baaac8-2953-4a5a-b5d0-d6e16c2b6906",
       "title": "Dynamisk programmering (10%)",
       "description": "",
       "stimulus": " ",
@@ -897,11 +856,11 @@
       "definition": {
         "widgets": [
           {
-            "reference": "0e42c847-c3b0-45b5-a826-a516f22aaf11",
+            "reference": "aae5d872-b65f-4aab-a084-b7c4e029db2a",
             "widget_type": "response"
           },
           {
-            "reference": "7c563ed6-f813-4713-b453-7bfd66053a5e",
+            "reference": "fc4b0c66-1391-4754-bcf8-6f4f3208f4c4",
             "widget_type": "response"
           }
         ]
@@ -909,116 +868,34 @@
       "status": "published",
       "questions": [
         {
-          "type": "custom",
+          "type": "longtextV2",
           "widget_type": "response",
-          "reference": "0e42c847-c3b0-45b5-a826-a516f22aaf11",
+          "reference": "aae5d872-b65f-4aab-a084-b7c4e029db2a",
           "data": {
-            "css": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.css",
-            "custom": {
-              "formatting_options": [
-                {
-                  "option": "appearance"
-                },
-                {
-                  "option": "formatting"
-                },
-                {
-                  "option": "coloring"
-                },
-                {
-                  "option": "alignment"
-                },
-                {
-                  "option": "lists"
-                },
-                {
-                  "option": "undo_redo"
-                },
-                {
-                  "option": "search_replace"
-                },
-                {
-                  "option": "clear_formatting"
-                }
-              ],
-              "languages": [
-                []
-              ],
-              "show_current_word_count": "always",
-              "show_maximum_words": "always"
-            },
-            "custom_type": "custom_type_long_essay_spell_check",
-            "height": 550,
-            "js": {
-              "question": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.js",
-              "scorer": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/scorer.js"
-            },
-            "type": "custom",
-            "width": 750,
-            "version": "0.0.1",
-            "stimulus": "<h3>Dynamisk programmering (10%)</h3><p>Vi betragter følgende variant af <i>rod cutting</i> problemet fra CLRS sektion 15.3. Input er et heltal \\(n\\) og en vektor \\(p\\) hvor \\(p_i\\) er fortjenesten på en stav af længde \\(n\\). I lighed med rod cutting skal en stav (eng.&nbsp;<i>rod</i>) af længde \\(n\\) deles op i kortere stave, alle af heltalslængde, således at den totale fortjeneste maksimeres. I modsætning til det originale rod cutting problem er der dog en omkostning på 1 for hvert snit, som skal modregnes i fortjenesten.</p><p><b>Eksempel.</b> Antag at vi har en stav af længde \\(n=5\\), hvor \\(p = (p_1,p_2,p_3,p_4,p_5) = (1,3,5,6,6)\\). Hvis vi deler staven i to dele af størrelse henholdsvis 2 og 3, så bliver fortjenesten \\(p_2 + p_3 - 1 = 7\\), hvor vi trækker \\(1\\) fra fordi der er ét snit. Hvis vi i stedet delte i 5 dele af størrelse 1 ville fortjenesten blive \\(5\\,p_1 - 4 = 1\\).</p><p><b>a)</b>&nbsp;&nbsp;Skriv en rekursionsligning for fortjenesten (eng.&nbsp;<i>revenue</i>) \\(r_n\\) for en stav af længde \\(n\\).</p>",
+            "type": "longtextV2",
             "is_math": true,
+            "max_length": 100000,
+            "stimulus": "<h3>Dynamisk programmering (10%)</h3><p>Vi betragter følgende variant af <i>rod cutting</i> problemet fra CLRS sektion 15.3. Input er et heltal \\(n\\) og en vektor \\(p\\) hvor \\(p_i\\) er fortjenesten på en stav af længde \\(i\\). I lighed med rod cutting skal en stav (eng.&nbsp;<i>rod</i>) af længde \\(n\\) deles op i kortere stave, alle af heltalslængde, således at den totale fortjeneste maksimeres. I modsætning til det originale rod cutting problem er der dog en omkostning på 1 for hvert snit, som skal modregnes i fortjenesten.</p><p><b>Eksempel.</b> Antag at vi har en stav af længde \\(n=5\\), hvor \\(p = (p_1,p_2,p_3,p_4,p_5) = (1,3,5,6,6)\\). Hvis vi deler staven i to dele af størrelse henholdsvis 2 og 3, så bliver fortjenesten \\(p_2 + p_3 - 1 = 7\\), hvor vi trækker \\(1\\) fra fordi der er ét snit. Hvis vi i stedet delte i 5 dele af størrelse 1 ville fortjenesten blive \\(5\\,p_1 - 4 = 1\\).</p><p><b>a)</b>&nbsp;&nbsp;Skriv en rekursionsligning for fortjenesten (eng.&nbsp;<i>revenue</i>) \\(r_n\\) for en stav af længde \\(n\\).</p>",
             "validation": {
               "max_score": 5
             },
             "metadata": {
-              "sample_answer": "<p>Vi har \\(r_0 = 0\\) og med samme argument for standard rod cutting er \\(r_n = \\max_{0\\leq i \\leq n} (p_i - r_{n-i} - 1)\\), hvor vi trækker 1 fra pga.&nbsp;omkostningen ved snittet.</p>"
+              "sample_answer": "<p>Vi har \\(r_0 = 0\\) og med samme argument som for standard rod cutting er \\(r_n = \\max\\bigl(p_n, \\max_{1\\leq i \\leq n-1} (p_i + r_{n-i} - 1)\\bigr)\\) for \\(n\\geq 1\\), hvor vi trækker 1 fra pga.&nbsp;omkostningen ved snittet mellem det første stykke af længde \\(i\\) og resten (sælges staven hel til \\(p_n\\), laves der intet snit).</p>"
             }
           },
           "metadata": {
-            "name": "Essay (med stavekontrol)"
+            "name": "Essay with rich text"
           }
         },
         {
-          "type": "custom",
+          "type": "longtextV2",
           "widget_type": "response",
-          "reference": "7c563ed6-f813-4713-b453-7bfd66053a5e",
+          "reference": "fc4b0c66-1391-4754-bcf8-6f4f3208f4c4",
           "data": {
-            "css": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.css",
-            "custom": {
-              "formatting_options": [
-                {
-                  "option": "appearance"
-                },
-                {
-                  "option": "formatting"
-                },
-                {
-                  "option": "coloring"
-                },
-                {
-                  "option": "alignment"
-                },
-                {
-                  "option": "lists"
-                },
-                {
-                  "option": "undo_redo"
-                },
-                {
-                  "option": "search_replace"
-                },
-                {
-                  "option": "clear_formatting"
-                }
-              ],
-              "languages": [
-                []
-              ],
-              "show_current_word_count": "always",
-              "show_maximum_words": "always"
-            },
-            "custom_type": "custom_type_long_essay_spell_check",
-            "height": 550,
-            "js": {
-              "question": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.js",
-              "scorer": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/scorer.js"
-            },
-            "type": "custom",
-            "width": 750,
-            "version": "0.0.1",
-            "stimulus": "<p><b>b)</b>&nbsp;&nbsp;Lav en analyse af køretiden af algoritme, der bruger rekursionsligningen og dynamisk programmering til at beregne fortjenesten ved en stav af længde \\(n\\). Analysen skal give en øvre grænse på køretiden som funktion af \\(n\\) i store-\\(O\\) notation, der er så præcis som mulig.</p>",
+            "type": "longtextV2",
             "is_math": true,
+            "max_length": 100000,
+            "stimulus": "<p><b>b)</b>&nbsp;&nbsp;Lav en analyse af køretiden af algoritme, der bruger rekursionsligningen og dynamisk programmering til at beregne fortjenesten ved en stav af længde \\(n\\). Analysen skal give en øvre grænse på køretiden som funktion af \\(n\\) i store-\\(O\\) notation, der er så præcis som mulig.</p>",
             "validation": {
               "max_score": 5
             },
@@ -1027,7 +904,7 @@
             }
           },
           "metadata": {
-            "name": "Essay (med stavekontrol)"
+            "name": "Essay with rich text"
           }
         }
       ],
@@ -1036,7 +913,7 @@
       "labels": []
     },
     {
-      "reference": "5640ad9c-3ca3-4373-91e1-b97997b7f008",
+      "reference": "9c5c4c14-8870-4d6e-b6d4-a7237125258b",
       "title": "Induktionsbeviser (6%)",
       "description": "",
       "stimulus": " ",
@@ -1047,7 +924,7 @@
       "definition": {
         "widgets": [
           {
-            "reference": "e200ef77-fa58-4cbd-a228-b39c0450e2f8",
+            "reference": "276cbfe7-63f1-44dc-9fe3-f6ee8e2034a2",
             "widget_type": "response"
           }
         ]
@@ -1055,55 +932,14 @@
       "status": "published",
       "questions": [
         {
-          "type": "custom",
+          "type": "longtextV2",
           "widget_type": "response",
-          "reference": "e200ef77-fa58-4cbd-a228-b39c0450e2f8",
+          "reference": "276cbfe7-63f1-44dc-9fe3-f6ee8e2034a2",
           "data": {
-            "css": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.css",
-            "custom": {
-              "formatting_options": [
-                {
-                  "option": "appearance"
-                },
-                {
-                  "option": "formatting"
-                },
-                {
-                  "option": "coloring"
-                },
-                {
-                  "option": "alignment"
-                },
-                {
-                  "option": "lists"
-                },
-                {
-                  "option": "undo_redo"
-                },
-                {
-                  "option": "search_replace"
-                },
-                {
-                  "option": "clear_formatting"
-                }
-              ],
-              "languages": [
-                []
-              ],
-              "show_current_word_count": "always",
-              "show_maximum_words": "always"
-            },
-            "custom_type": "custom_type_long_essay_spell_check",
-            "height": 550,
-            "js": {
-              "question": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.js",
-              "scorer": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/scorer.js"
-            },
-            "type": "custom",
-            "width": 750,
-            "version": "0.0.1",
-            "stimulus": "<h3>Induktionsbeviser (6%)</h3><p>I denne opgave betragter vi \\(n\\)-kanter som disse eksempler (\\(n=4\\) og \\(n=6\\)):</p><div style=\"text-align:center\"><p><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVsAAAFbCAIAAAD0rbq6AAAACXBIWXMAADsOAAA7DgHMtqGDAAADU0lEQVR42u3csQ2AQAwEQR/6/ls2RbwD6zWTQ2CJ1UWkuwugqqo+JwAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBGAR5zL55M4Iuxx+S9lGwGY2wgjWQLujQx2GwFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBABFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQBQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQBQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUAQARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAUARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUAQARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBGA/c7IW5I4JdgI1d2OCM+ITxoY2wiAIgCKACgCoAiAIgCKAKAIgCIAigAoAqAIgCIAigAoAqAIgCIAigAoAqAIwBY/IsERtXbytbEAAAAASUVORK5CYII=\" alt=\"[figure]\" width=\"87\" height=\"87\" style=\"max-width:100%;height:auto\"></p><p><img src=\"data:image/png;base64,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\" alt=\"[figure]\" width=\"87\" height=\"87\" style=\"max-width:100%;height:auto\"></p></div><p>Vi er interesserede i antal <i>diagonaler</i>, dvs.&nbsp;linjer der forbinder to hjørner i \\(n\\)-kanterne og er helt indeholdt i figuren. En 3-kant har ingen diagonaler da alle hjørner er naboer, mens vi for \\(n=4\\) og \\(n=6\\) har henholdsvis 2 og 9 diagonaler.</p><div style=\"text-align:center\"><p><img src=\"data:image/png;base64,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\" alt=\"[figure]\" width=\"88\" height=\"88\" style=\"max-width:100%;height:auto\"></p><p><img src=\"data:image/png;base64,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\" alt=\"[figure]\" width=\"88\" height=\"88\" style=\"max-width:100%;height:auto\"></p></div><p>En diagonal deler en \\(n\\)-kant en \\(n_1\\)-kant og en \\(n_2\\) kant, der deler en kant og hvor \\(n_1 + n_2 = n + 2\\). For eksempel deler 4-kantens diagonal den i to 3-kanter.</p><p><b>a)</b>&nbsp;&nbsp;Bevis ved induktion at antal diagonaler \\(d_n\\) i en \\(n\\)-kant er lig med \\(n(n-3)/2\\) for \\(n\\geq 3\\). Der lægges vægt på, at argumentationen er klar og koncis.</p>",
+            "type": "longtextV2",
             "is_math": true,
+            "max_length": 100000,
+            "stimulus": "<h3>Induktionsbeviser (6%)</h3><p>I denne opgave betragter vi \\(n\\)-kanter som disse eksempler (\\(n=4\\) og \\(n=6\\)):</p><div style=\"text-align:center\"><p><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVsAAAFbCAIAAAD0rbq6AAAACXBIWXMAADsOAAA7DgHMtqGDAAADU0lEQVR42u3csQ2AQAwEQR/6/ls2RbwD6zWTQ2CJ1UWkuwugqqo+JwAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBGAR5zL55M4Iuxx+S9lGwGY2wgjWQLujQx2GwFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBABFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQBQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQBQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUAQARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAUARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARAEUAFAFQBEARABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUARAEQBFABQBUAQARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBEARQAUAVAEQBGA/c7IW5I4JdgI1d2OCM+ITxoY2wiAIgCKACgCoAiAIgCKAKAIgCIAigAoAqAIgCIAigAoAqAIgCIAigAoAqAIwBY/IsERtXbytbEAAAAASUVORK5CYII=\" alt=\"[figure]\" width=\"87\" height=\"87\" style=\"max-width:100%;height:auto\"></p><p><img src=\"data:image/png;base64,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\" alt=\"[figure]\" width=\"87\" height=\"87\" style=\"max-width:100%;height:auto\"></p></div><p>Vi er interesserede i antal <i>diagonaler</i>, dvs.&nbsp;linjer der forbinder to hjørner i \\(n\\)-kanterne og er helt indeholdt i figuren. En 3-kant har ingen diagonaler da alle hjørner er naboer, mens vi for \\(n=4\\) og \\(n=6\\) har henholdsvis 2 og 9 diagonaler.</p><div style=\"text-align:center\"><p><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWAAAAFgCAIAAAAKAzQbAAAACXBIWXMAADsOAAA7DgHMtqGDAAAIc0lEQVR42u3dMW7UTBiA4c9WutSRcgek5ACblmvQUOUClJFSUtJzBFo6yuUCqTgC0rakizDF6g8U3uUPOx5/Yz9vFW2iJUzkh5mJ8XTDMIQkjdUbAkmAkAQISYCQBAhJgJAECEmAkAQISYCQBAhJAoQkQEgChCRASAKEJEBIAoQkQEgChCRASNIkQDw9xevX8fWrYZVqt9vF9XXsdmXftSvy2Puu6/yApDyVOs7CEkPSwc7KrCye3frz9e02NhtDLE27sri6iu/ff0/nn1+/uMgxg3jzZvz1mxv7EVJNHX53dRWPjzmA+PDh4KcYIdXXISJub+P8/PQ/pPAm5fh7WWtItXTYX4pNbVKaR0jV5g5FKw3E5SUjpNl0uL/PDcTDAyOk2XS4u8sNxMUFI6Rl6BCT7EEwQlqEDjHVJiUjpPZ1iAl/i8EIqXEdYtpfczJCalmHmPw+CEZIzeoQNW6UYoTUpg5R6U5KRkgN6hD1ngfBCKk1HaLqA2MYITWlQ9R+ohQjpHZ0iBkeOccIqREdYp5nUjJCakGHmO2htYyQ0usQcz7VmhFSbh1i5sfeM0J0SKxDzH8uBiNEh6w6RIqDcxghOqTUIbKcrMUI0SGfDpHo6D1GiA7JdIhcZ3MyQnTIpEOkO7yXEaIDIBghOuTXISUQjBAdAMEI0SG5DomBYIToAAhGiA6AYITo0J4OLQDBCNEBEIwQHQDBCNHhrqG/Td/S0DNCdAAEI0QHQDBCdAAEI0SHNnVoFghGiA6AYIToAAhGiA6AYIToAAhGiA7L0GEpQDBCdAAEI0QHQDBCdAAEI0QHQDBCdAAEI0QHQDBCdFiNDosGghGiAyAYIToAghGiAyAYIToAghGiAyAYIToAghGiAyAYIToAghGMoAMd1gwEI0QHQDBCdAAEI0QHQDBCdAAEI0QHQDBCdAAEI0QHQDBCdAAEIxhBB0AwghF0ECAYQQc6AIIRdKADIBghOgCCEaIDIBghOgCCEaIDIBghOgCCEaIDIBjBCDoAQoygAyDECDoIEIyggwDBCDrQARCMEB0AwQjRARCMEB0AwQjRARCMYAQdACFG0AEQYgQdACFG0EGAYAQdBAhG0EGAYAQdBAhG0IEOgGCE6AAIRjCCDoAQI+gACDGCDoAQI+gACDGCDgIEI+ggQDCCDgIEI+ggQDCCDgIEI9ZgBB0AIUbQARBiBB0AIUbQARBiBB0ECEbQQYBgBB0ECEbQQYBgRGtG0AEQYgQdACFG0AEQYgQdBAhG0EGAYAQdBAhG0EGAYEReI+gACDGCDoAQI+gACDGCDgIEI+ggQDCirhF0AIQYQQdAiBF0ECAYQQcBghFTGUEHQIgRdBAgGEEHAYIRpxtBB0CIEXQQIBhBBwGCEacbQQdAiBF0ECAY8RIj6AAIQ8AIOggQjHiJEXQQIBgxbgQdBAhGjBtBBwGCEeNGfP5MB/1ZNwxDgXfpuv0HRd5N03Z8jnAoOrRySXddwSvRDMI8gg4ChP7ZCDoAQoygg0YWLPYgVt23b/HqVfz8Of7Zt2/j40eD1NglXXQPAhAr7v/sVm63sdkYqtUCYYlBh6OlOjdc1QMEHf4WIwAhOjBCgKDDUR3evct4brgAofl1uL+P9+/TnRsuQCiFDvv7HVKdGy5AKJEO+xghQNBhXAdGCBB0OKYDIwQIOvz9/1kwAhCGgA6MECDo8HIdGAEIQ0AHRggQdPhXHRgBCNGBEQIEHU6LEYAQHRghQNCBEQIEHaZ46iwjACE6MAIQogMjBAg6MEKAoEPt024YAQjRgRGAEB0YIUDQgRECBB0YIUDQIdMZ3IwAhOjACECIDowAhOjACAGCDowQIOjACAGCDq3ECECIDowAhOjACECIDowQIOjACAGCDowQIOjACAGCDowQIOiwXB0YAQjRgRGAEB0YAQjRgRGAEB0YIUDQgRECBB0YIUDQgRECBB0YwQhA0EGMAAQd6MAIQNCBDowAhOjACECIDowAhOjACAGCDowQIOjACAGCDoxgBCDowAhGAIIOYgQg6CBGAIIOYgQg6EAHRgCCDnRgBCBEB0YAQnRghABBB0YIEHRgBCMAQQcxAhB0ECMAQQcxAhB0ECMAQQcxAhB0ECMAQQc6MAIQogMjBAg6MIIRgKCDGAEIOogRgKCDGAEIOogRgKCDGAEIOogRgKCDGAEIOogRgKADHRjBiJUCQQcxAhB0ECMAQQcxAhB0ECMAQQcxAhB0ECMAQQcxAhB0ECMAQQcxYl1G9HSQGLEyIOggRgCCDmIEIOggRgCCDmIEIOggRgCCDmIEIOggRizXiJ4OEiMWCgQdxAhA0EGMAAQdxAhA0EGMAAQdxIjWjejpIDFiEUDQQYwABB3ECEDQQYwABB3EiGaN6OkgMaJNIOggRgCCDmIEIOggRjRmRE8HiRHtAEEHMQIQdBAj8hvR00FiRHog6CBG5DOip4PEiMRA0EGMyGpETweJESmBoIMYkduIng4SI5IBQQepBSN6OkiMSAMEHaR2jOjpIDEiARB0kFozoqeDxIhZgaCD1KYRPR0kRswEBB2klo3o6SAxojoQdJDaN6Kng8SIikDQQVqKET0dJEYcqhuGocC7dN3+g+Hykg7ShB3/N3i77W5uIqLIdT0BEIe+gg5SFSP2l2IpIKrcSUkHqdpaI90exG5HBymXEYX2I0osMa6vu4eH8SUGHaS6a43u+Ur88SPOzxPMIL58MXeQcs0jttvTdYjim5SSMpRrk7LUdyMpVV3Ja3u/Irq9tbKQare/+j59is0mKxAR8fhYZOUj6cU9PcXZWeIZhKRl1RsCSYCQBAhJgJAECEmAkAQISYCQBAhJgJAECEkChCRASAKEJEBIAoQkQEgChCRASAKEJEBI0n/9ApFm3eOlLCQDAAAAAElFTkSuQmCC\" alt=\"[figure]\" width=\"88\" height=\"88\" style=\"max-width:100%;height:auto\"></p><p><img src=\"data:image/png;base64,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\" alt=\"[figure]\" width=\"88\" height=\"88\" style=\"max-width:100%;height:auto\"></p></div><p>En diagonal deler en \\(n\\)-kant en \\(n_1\\)-kant og en \\(n_2\\) kant, der deler en kant og hvor \\(n_1 + n_2 = n + 2\\). For eksempel deler 4-kantens diagonal den i to 3-kanter.</p><p><b>a)</b>&nbsp;&nbsp;Bevis ved induktion at antal diagonaler \\(d_n\\) i en \\(n\\)-kant er lig med \\(n(n-3)/2\\) for \\(n\\geq 3\\). Der lægges vægt på, at argumentationen er klar og koncis.</p>",
             "validation": {
               "max_score": 6
             },
@@ -1112,7 +948,7 @@
             }
           },
           "metadata": {
-            "name": "Essay (med stavekontrol)"
+            "name": "Essay with rich text"
           }
         }
       ],
@@ -1121,7 +957,7 @@
       "labels": []
     },
     {
-      "reference": "9dd9588f-3b37-4257-8fed-6d26f5e611fa",
+      "reference": "33b4e027-6e34-4ef4-ba50-6c8b66abfd3d",
       "title": "Korrekthed og køretid (10%)",
       "description": "",
       "stimulus": " ",
@@ -1132,15 +968,15 @@
       "definition": {
         "widgets": [
           {
-            "reference": "4af65aca-604f-4b2f-b955-57fdccfbee51",
+            "reference": "329461df-01d5-4b85-a990-e10802ceba0f",
             "widget_type": "response"
           },
           {
-            "reference": "63b6a5e0-4f4c-45d2-9651-29176ebcd78d",
+            "reference": "4b19d2d9-8810-4f43-99bd-d71d4b123750",
             "widget_type": "response"
           },
           {
-            "reference": "f063664a-22b7-4c8a-b832-b28ba976d17b",
+            "reference": "6c054f47-4dfc-4143-b48d-225c1e8528f3",
             "widget_type": "response"
           }
         ]
@@ -1148,177 +984,54 @@
       "status": "published",
       "questions": [
         {
-          "type": "custom",
+          "type": "longtextV2",
           "widget_type": "response",
-          "reference": "4af65aca-604f-4b2f-b955-57fdccfbee51",
+          "reference": "329461df-01d5-4b85-a990-e10802ceba0f",
           "data": {
-            "css": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.css",
-            "custom": {
-              "formatting_options": [
-                {
-                  "option": "appearance"
-                },
-                {
-                  "option": "formatting"
-                },
-                {
-                  "option": "coloring"
-                },
-                {
-                  "option": "alignment"
-                },
-                {
-                  "option": "lists"
-                },
-                {
-                  "option": "undo_redo"
-                },
-                {
-                  "option": "search_replace"
-                },
-                {
-                  "option": "clear_formatting"
-                }
-              ],
-              "languages": [
-                []
-              ],
-              "show_current_word_count": "always",
-              "show_maximum_words": "always"
-            },
-            "custom_type": "custom_type_long_essay_spell_check",
-            "height": 550,
-            "js": {
-              "question": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.js",
-              "scorer": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/scorer.js"
-            },
-            "type": "custom",
-            "width": 750,
-            "version": "0.0.1",
-            "stimulus": "<h3>Korrekthed og køretid (10%)</h3><p>I denne opgave bruger vi matrix og vektor-notation, se evt.&nbsp;CLRS appendix D.1. Fibonaccitallene \\(F_0, F_1, F_2,\\dots\\) er defineret ved \\(F_0 = 0\\), \\(F_1 = 1\\), og \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n&gt;1\\). Betragt nu matricen \\(A\\) og søjlevektorer på formen \\(x = (x_1, x_2)^T\\).</p><p>\\[A = \\begin{pmatrix} 0 &amp; 1 \\\\ 1 &amp; 1 \\end{pmatrix} \\qquad x = \\begin{pmatrix} x_1\\\\ x_2 \\end{pmatrix}\\]</p><p><b>a)</b>&nbsp;&nbsp;Argumentér for at for \\(x = (F_{n-2}, F_{n-1})^T\\) opfylder matrix-vektor produktet ligheden \\(A x = (F_{n-1}, F_{n})^T\\) for \\(n&gt;1\\).</p>",
+            "type": "longtextV2",
             "is_math": true,
+            "max_length": 100000,
+            "stimulus": "<h3>Korrekthed og køretid (10%)</h3><p>I denne opgave bruger vi matrix og vektor-notation, se evt.&nbsp;CLRS appendix D.1. Fibonaccitallene \\(F_0, F_1, F_2,\\dots\\) er defineret ved \\(F_0 = 0\\), \\(F_1 = 1\\), og \\(F_{n} = F_{n-1} + F_{n-2}\\) for \\(n&gt;1\\). Betragt nu matricen \\(A\\) og søjlevektorer på formen \\(x = (x_1, x_2)^T\\).</p><p>\\[A = \\begin{pmatrix} 0 &amp; 1 \\\\ 1 &amp; 1 \\end{pmatrix} \\qquad x = \\begin{pmatrix} x_1\\\\ x_2 \\end{pmatrix}\\]</p><p><b>a)</b>&nbsp;&nbsp;Argumentér for at for \\(x = (F_{n-2}, F_{n-1})^T\\) opfylder matrix-vektor produktet ligheden \\(A x = (F_{n-1}, F_{n})^T\\) for \\(n&gt;1\\).</p>",
             "validation": {
               "max_score": 4
             },
             "metadata": {
-              "sample_answer": "<p>Per definition af matrix-vektor produkter har vi: \\[A = \\begin{pmatrix} 0 &amp; 1 \\\\ 1 &amp; 1 \\end{pmatrix} \\begin{pmatrix} F_{n-2}\\\\ F_{n-1} \\end{pmatrix} = \\begin{pmatrix} F_{n-1}\\\\ F_{n-2} + F_{n-1} \\end{pmatrix} = \\begin{pmatrix} F_{n-1}\\\\ F_{n} \\end{pmatrix},\\] hvor den sidste lighed bruger definitionen af \\(F_n\\).</p>"
+              "sample_answer": "<p>Per definition af matrix-vektor produkter har vi: \\[\\begin{pmatrix} 0 &amp; 1 \\\\ 1 &amp; 1 \\end{pmatrix} \\begin{pmatrix} F_{n-2}\\\\ F_{n-1} \\end{pmatrix} = \\begin{pmatrix} F_{n-1}\\\\ F_{n-2} + F_{n-1} \\end{pmatrix} = \\begin{pmatrix} F_{n-1}\\\\ F_{n} \\end{pmatrix},\\] hvor den sidste lighed bruger definitionen af \\(F_n\\).</p>"
             }
           },
           "metadata": {
-            "name": "Essay (med stavekontrol)"
+            "name": "Essay with rich text"
           }
         },
         {
-          "type": "custom",
+          "type": "longtextV2",
           "widget_type": "response",
-          "reference": "63b6a5e0-4f4c-45d2-9651-29176ebcd78d",
+          "reference": "4b19d2d9-8810-4f43-99bd-d71d4b123750",
           "data": {
-            "css": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.css",
-            "custom": {
-              "formatting_options": [
-                {
-                  "option": "appearance"
-                },
-                {
-                  "option": "formatting"
-                },
-                {
-                  "option": "coloring"
-                },
-                {
-                  "option": "alignment"
-                },
-                {
-                  "option": "lists"
-                },
-                {
-                  "option": "undo_redo"
-                },
-                {
-                  "option": "search_replace"
-                },
-                {
-                  "option": "clear_formatting"
-                }
-              ],
-              "languages": [
-                []
-              ],
-              "show_current_word_count": "always",
-              "show_maximum_words": "always"
-            },
-            "custom_type": "custom_type_long_essay_spell_check",
-            "height": 550,
-            "js": {
-              "question": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.js",
-              "scorer": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/scorer.js"
-            },
-            "type": "custom",
-            "width": 750,
-            "version": "0.0.1",
-            "stimulus": "<p><b>b)</b>&nbsp;&nbsp;Bevis at for \\(x = (0,1)^T\\) gælder ligheden \\(A^{n-1} x = (F_{n-1}, F_{n})^T\\) for \\(n\\geq 1\\).</p>",
+            "type": "longtextV2",
             "is_math": true,
+            "max_length": 100000,
+            "stimulus": "<p><b>b)</b>&nbsp;&nbsp;Bevis at for \\(x = (0,1)^T\\) gælder ligheden \\(A^{n-1} x = (F_{n-1}, F_{n})^T\\) for \\(n\\geq 1\\).</p>",
             "validation": {
               "max_score": 3
             },
             "metadata": {
-              "sample_answer": "<p>Bevis ved induktion i \\(n\\). Basistilfældet \\(n=1\\) gælder da \\(A^{n-1} x = x = (F_0, F_1)^T\\). Antag som induktionshypotese at \\(A^{i-1} x = (F_{i-1}, F_{i})^T\\) for \\(1\\leq i &lt; n\\). Da har vi \\[A^{n-1} x = A(A^{n-1} x) = A (F_{i-1}, F_{i})^T = (F_{n-1}, F_{n})^T,\\] hvor lighed nummer 2 bruger induktionshypotesen og lighed nummer 3 bruger del a).</p>"
+              "sample_answer": "<p>Bevis ved induktion i \\(n\\). Basistilfældet \\(n=1\\) gælder da \\(A^{n-1} x = x = (F_0, F_1)^T\\). Antag som induktionshypotese at \\(A^{i-1} x = (F_{i-1}, F_{i})^T\\) for \\(1\\leq i &lt; n\\). Da har vi \\[A^{n-1} x = A(A^{n-2} x) = A (F_{n-2}, F_{n-1})^T = (F_{n-1}, F_{n})^T,\\] hvor lighed nummer 2 bruger induktionshypotesen og lighed nummer 3 bruger del a).</p>"
             }
           },
           "metadata": {
-            "name": "Essay (med stavekontrol)"
+            "name": "Essay with rich text"
           }
         },
         {
-          "type": "custom",
+          "type": "longtextV2",
           "widget_type": "response",
-          "reference": "f063664a-22b7-4c8a-b832-b28ba976d17b",
+          "reference": "6c054f47-4dfc-4143-b48d-225c1e8528f3",
           "data": {
-            "css": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.css",
-            "custom": {
-              "formatting_options": [
-                {
-                  "option": "appearance"
-                },
-                {
-                  "option": "formatting"
-                },
-                {
-                  "option": "coloring"
-                },
-                {
-                  "option": "alignment"
-                },
-                {
-                  "option": "lists"
-                },
-                {
-                  "option": "undo_redo"
-                },
-                {
-                  "option": "search_replace"
-                },
-                {
-                  "option": "clear_formatting"
-                }
-              ],
-              "languages": [
-                []
-              ],
-              "show_current_word_count": "always",
-              "show_maximum_words": "always"
-            },
-            "custom_type": "custom_type_long_essay_spell_check",
-            "height": 550,
-            "js": {
-              "question": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/question.js",
-              "scorer": "https://wf-eu-central-1-stage-custom-questions.s3.eu-central-1.amazonaws.com/learnosity/1.0/questionTypes/LongEssaySpellChecking/scorer.js"
-            },
-            "type": "custom",
-            "width": 750,
-            "version": "0.0.1",
-            "stimulus": "<p><b>c)</b>&nbsp;&nbsp;Argumentér for at \\(A^{n-1}\\), og dermed også \\(A^{n-1} x\\), kan udregnes i tid \\(O(\\lg n)\\), hvis vi antager at aritmetiske operationer tager konstant tid.</p>",
+            "type": "longtextV2",
             "is_math": true,
+            "max_length": 100000,
+            "stimulus": "<p><b>c)</b>&nbsp;&nbsp;Argumentér for at \\(A^{n-1}\\), og dermed også \\(A^{n-1} x\\), kan udregnes i tid \\(O(\\lg n)\\), hvis vi antager at aritmetiske operationer tager konstant tid.</p>",
             "validation": {
               "max_score": 3
             },
@@ -1327,7 +1040,7 @@
             }
           },
           "metadata": {
-            "name": "Essay (med stavekontrol)"
+            "name": "Essay with rich text"
           }
         }
       ],
@@ -1338,8 +1051,8 @@
   ],
   "metadata": {
     "author_version": "4.8.1",
-    "date_created": 1791961605,
-    "created_by": "latex2qti",
+    "date_created": 1795772561,
+    "created_by": "latex2quiz",
     "content": "item"
   }
 }

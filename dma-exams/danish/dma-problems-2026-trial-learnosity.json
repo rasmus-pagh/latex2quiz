@@ -1,0 +1,2039 @@
+{
+  "data": [
+    {
+      "reference": "757cdec0-371d-4831-85d9-e18002347e71",
+      "title": "Arrays (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "bb46e5c9-4f64-4738-a080-f040b086dbd9",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "bb46e5c9-4f64-4738-a080-f040b086dbd9",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(2\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(4\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(5\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(8\\)",
+                "value": "3"
+              },
+              {
+                "label": "\\(9\\)",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Arrays (4%)</h3><p>Lad \\(A[0:4] = \\langle 8, 2, 9, 5, 4 \\rangle\\) og \\(B[1:5] = \\langle 5, 4, 1, 2, 3 \\rangle\\). Hvad er \\(A[3 \\cdot B[4]-3]\\)?</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Arrays (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "2"
+                ]
+              },
+              "penalty": 1
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Vi finder først \\(B[4]\\), som er \\(2\\). Derefter finder vi \\(A[3 \\cdot B[4] - 3] = A[3]\\), som er \\(5\\).</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "3cae22c7-8733-4477-bfce-79c8d03f6bba",
+      "title": "Toppunkter i array (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "cafbc060-6db1-4023-9ce7-6dc6754bc8e9",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "cafbc060-6db1-4023-9ce7-6dc6754bc8e9",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(0\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(1\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(2\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(3\\)",
+                "value": "3"
+              },
+              {
+                "label": "\\(4\\)",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Toppunkter i array (4%)</h3><p>Hvilke indekser er toppunkter i følgende array: \\(A[0:4] = [2,8,8,9,1]\\)? Husk at et index \\(i\\) er et toppunkt, hvis \\(A[i]\\) er større end eller lig alle naboelementer (hvert element har ét eller to naboelementer).</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Toppunkter i array (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 2,
+                "value": [
+                  "1",
+                  "3"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Her er \\(A[1]=8\\) større end \\(A[0]=2\\) og lig \\(A[2]=8\\), og \\(A[3]=9\\) større end \\(A[2]=8\\) og \\(A[4]=1\\). Derfor er \\(1\\) og \\(3\\) toppunkter.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "e7751803-3051-4628-80b0-49a86580243f",
+      "title": "Kombinatorik (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "f217a428-9b67-44f8-be64-ec1bccc74764",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "f217a428-9b67-44f8-be64-ec1bccc74764",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(n^{k}\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(\\frac{n!}{(n-k)!}\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(\\frac{n!}{(n-k)!k!}\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(n \\cdot \\sum_{i=1}^{k} i\\)",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Kombinatorik (4%)</h3><p>Hvor mange forskellige måder kan vi vælge \\(k\\) elementer fra en mængde med \\(n\\) elementer, når rækkefølgen ikke betyder noget og vi ikke må vælge det samme element flere gange?</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Kombinatorik (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "2"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Det rigtige svar svarer til binomialkoefficienten \\(\\binom{n}{k} = \\frac{n!}{(n-k)!k!}\\), som præcis er antallet af delmængder af størrelse \\(k\\) af en mængde af størrelse \\(n\\).</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "f14d318b-1f5b-4c66-8161-048322b3bc3f",
+      "title": "Hashing (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "e60c11ec-a574-48f2-8df5-36e9ec789719",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "e60c11ec-a574-48f2-8df5-36e9ec789719",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "Enhver nøgle (key) har samme sandsynlighed for at blive sendt til enhver indgang (entry) i hash-tabellen, uafhængigt af hvor andre nøgler sendes.",
+                "value": "0"
+              },
+              {
+                "label": "Hash-funktionen er kontinuert.",
+                "value": "1"
+              },
+              {
+                "label": "Hvis man udregner hash-værdien med den samme nøgle flere gange, får man næsten altid forskellige resultater.",
+                "value": "2"
+              },
+              {
+                "label": "Hash funktionen er hurtig at beregne.",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Hashing (4%)</h3><p>Hvilke af følgende egenskaber er gode for en hash-funktion at have?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Hashing (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 2,
+                "value": [
+                  "0",
+                  "3"
+                ]
+              },
+              "penalty": 2
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<ol><li>Vi vil gerne have en jævn fordeling af nøgler i hash-tabellen, og at nøglernes placeringer ikke afhænger af hinanden, så vi vil gerne have egenskab (1).</li><li>Vi får ikke noget ud af kontinuitet i en hash-funktion, så (2) er irrelevant.</li><li>En hash-funktion skal altid give det samme resultat for den samme nøgle, så (3) er forkert.</li><li>Endelig vil vi gerne have at hash-funktionen er hurtig at beregne, så (4) er korrekt.</li></ol>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "1ed4b9d5-8b88-490a-be61-c99e1cd95f3f",
+      "title": "Begreber i grafer (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "fa27cb93-9ef5-4d7a-adf1-612046f9f945",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "fa27cb93-9ef5-4d7a-adf1-612046f9f945",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "Kanter (edges)",
+                "value": "0"
+              },
+              {
+                "label": "Cykler (cycles)",
+                "value": "1"
+              },
+              {
+                "label": "Akser (axes)",
+                "value": "2"
+              },
+              {
+                "label": "Stier (paths)",
+                "value": "3"
+              },
+              {
+                "label": "Kurver (curves)",
+                "value": "4"
+              },
+              {
+                "label": "Funktioner (functions)",
+                "value": "5"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Begreber i grafer (4%)</h3><p>Hvilke af nedenstående begreber kan man bruge til at beskrive dele af en graf \\(G=(V,E)\\)?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Begreber i grafer (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 1.333,
+                "value": [
+                  "0",
+                  "1",
+                  "3"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>En graf består af knuder og kanter. Man kan også tale om stier og cykler i en graf. Begreber som akser, kurver og funktioner hører ikke til den grundlæggende grafteori.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "d59e7977-2806-411d-bdb1-2f922ba8727e",
+      "title": "Basale pseudokode-ord (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "aadfe254-4cd3-40d1-b5dd-95403db10399",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "aadfe254-4cd3-40d1-b5dd-95403db10399",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "if",
+                "value": "0"
+              },
+              {
+                "label": "can",
+                "value": "1"
+              },
+              {
+                "label": "for",
+                "value": "2"
+              },
+              {
+                "label": "return",
+                "value": "3"
+              },
+              {
+                "label": "invert",
+                "value": "4"
+              },
+              {
+                "label": "align",
+                "value": "5"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Basale pseudokode-ord (4%)</h3><p>Hvilke af følgende ord bruger vi ofte i pseudokode?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Basale pseudokode-ord (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 1.333,
+                "value": [
+                  "0",
+                  "2",
+                  "3"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>I standard pseudokode bruger vi ofte if, for og return, men ikke de andre ord.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "47965d18-bcb8-44f5-af19-8a1fae3348f2",
+      "title": "Datastrukturer fra pensum (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "253aa7f0-ec69-4760-900e-467789ddf076",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "253aa7f0-ec69-4760-900e-467789ddf076",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "udvidet pointer (extended pointer)",
+                "value": "0"
+              },
+              {
+                "label": "kø (queue)",
+                "value": "1"
+              },
+              {
+                "label": "samling (collection)",
+                "value": "2"
+              },
+              {
+                "label": "dobbelt kæde (double chain)",
+                "value": "3"
+              },
+              {
+                "label": "familie (family)",
+                "value": "4"
+              },
+              {
+                "label": "enkelthægtet liste (singly linked list)",
+                "value": "5"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Datastrukturer fra pensum (4%)</h3><p>Hvilke af følgende er navne på datastrukturer fra kursets pensum?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Datastrukturer fra pensum (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 2,
+                "value": [
+                  "1",
+                  "5"
+                ]
+              },
+              "penalty": 1
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Enkelthægtet liste og kø er klassiske datastrukturer i pensum. Ord som udvidet pointer, samling, dobbelt kæde og familie er ikke standard datastrukturer i kurset.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "0f926983-0a5f-40eb-8d8a-75c219b71c6b",
+      "title": "Egenskaber ved binære søgetræer (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "cd8e5555-de80-4b26-89f0-c551eb54089d",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "cd8e5555-de80-4b26-89f0-c551eb54089d",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "Hver knude (node) har nul, et eller to børn",
+                "value": "0"
+              },
+              {
+                "label": "Hver knude har to forældre",
+                "value": "1"
+              },
+              {
+                "label": "For enhver knude \\(v\\) gælder at hvis \\(v.left \\neq \\text{NIL}\\), så er \\(v.left.key \\leq v.key\\)",
+                "value": "2"
+              },
+              {
+                "label": "Højden af træet (dvs.&nbsp;antal kanter (edges) på den længste sti (path) fra et blad til roden) er altid \\(O(\\log n)\\), hvor \\(n\\) er antallet af knuder",
+                "value": "3"
+              },
+              {
+                "label": "Antallet af knuder i venstre deltræ under roden er altid mindre end antallet i højre deltræ",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Egenskaber ved binære søgetræer (4%)</h3><p>Hvilke af følgende udsagn beskriver egenskaber ved et binært søgetræ (binary search tree)?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Egenskaber ved binære søgetræer (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 2,
+                "value": [
+                  "0",
+                  "2"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Et binært søgetræ har højst to børn per knude, og venstre barns nøgle er mindre end eller lig med knudens nøgle. Antallet af knuder i venstre og højre deltræ kan variere, så der er ikke altid færre knuder i venstre deltræ. Højden er ikke altid \\(O(\\log n)\\); det gælder kun for balancerede træer. Hver knude har netop én forælder, undtagen roden som ingen har.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "f01b0285-3fbc-4675-84cd-6c5a31dd1efb",
+      "title": "Egenskaber ved relationer (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "68c26c7e-80fc-46db-afea-79281d548ce4",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "68c26c7e-80fc-46db-afea-79281d548ce4",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "refleksiv",
+                "value": "0"
+              },
+              {
+                "label": "indikativ",
+                "value": "1"
+              },
+              {
+                "label": "biimplikativ",
+                "value": "2"
+              },
+              {
+                "label": "transitiv",
+                "value": "3"
+              },
+              {
+                "label": "projektiv",
+                "value": "4"
+              },
+              {
+                "label": "distributiv",
+                "value": "5"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Egenskaber ved relationer (4%)</h3><p>Hvilke af følgende ord beskriver en egenskab ved en relation?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Egenskaber ved relationer (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 2,
+                "value": [
+                  "0",
+                  "3"
+                ]
+              },
+              "penalty": 1
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Ordene refleksiv og transitiv beskriver egenskaber for relationer. Ord som indikativ, biimplikativ, projektiv og distributiv er ikke standardegenskaber for relationer.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "1191e0c2-d71a-40b4-af0a-401cfcef06f8",
+      "title": "Symmetrisk relation (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "d365f902-fd0d-423c-ae40-ba4f11a46156",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "d365f902-fd0d-423c-ae40-ba4f11a46156",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "Hvis \\((a,b) \\in R\\), så er \\((a,a) \\in R\\)",
+                "value": "0"
+              },
+              {
+                "label": "Hvis \\((a,b) \\in R\\), så er \\((a,c) \\in R\\) for alle \\(c \\in X\\)",
+                "value": "1"
+              },
+              {
+                "label": "Hvis \\((a,b) \\in R\\), så er \\((b,a) \\in R\\) og \\(a \\neq b\\)",
+                "value": "2"
+              },
+              {
+                "label": "Hvis \\((a,b) \\in R\\), så er \\((b,a) \\in R\\)",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Symmetrisk relation (4%)</h3><p>Lad \\(X\\) være en mængde og lad \\(R \\subseteq X \\times X\\) være en relation på \\(X\\). Hvad er definitionen på at \\(R\\) er symmetrisk?</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Symmetrisk relation (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "3"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>En relation \\(R\\) er symmetrisk, hvis for alle \\(a,b \\in X\\) gælder: \\((a,b) \\in R \\implies (b,a) \\in R\\). De andre udsagn beskriver ikke symmetri.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "f3f80547-0d74-49e2-9036-166f942aa370",
+      "title": "Asymptotisk analyse (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "3d872b72-ffe7-4ccd-b6b2-7b3d98650eac",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "3d872b72-ffe7-4ccd-b6b2-7b3d98650eac",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(f = O(x^{3})\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(f = O(x^{3}\\log x)\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(f = O(x^{4})\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(f = \\Omega(x^{3})\\)",
+                "value": "3"
+              },
+              {
+                "label": "\\(f = \\Omega(x^{4})\\)",
+                "value": "4"
+              },
+              {
+                "label": "\\(f = \\Theta(x^{3}\\log x)\\)",
+                "value": "5"
+              },
+              {
+                "label": "\\(f = \\Theta(x^{3})\\)",
+                "value": "6"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Asymptotisk analyse (4%)</h3><p>Betragt funktionen \\[\\begin{aligned} f(x) = x^{3}\\log x + 7x^{2} + 10x. \\end{aligned}\\] Hvilke af følgende udsagn om \\(f\\) er korrekte?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Asymptotisk analyse (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 1,
+                "value": [
+                  "1",
+                  "2",
+                  "3",
+                  "5"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Det dominerende led i \\(f\\) er \\(x^{3}\\log x\\), så \\(f = O(x^{3}\\log x)\\) og \\(f = O(x^{4})\\). Da \\(f\\) vokser hurtigere end \\(x^{3}\\) er \\(f = \\Omega(x^{3})\\). Da den dominerende term er \\(x^{3}\\log x\\) er \\(f = \\Theta(x^{3}\\log x)\\).</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "ff4c57ab-210e-463a-9c05-0155173f4545",
+      "title": "Pseudokode (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "a6c51600-f788-45ba-a82f-d73208a81cb7",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "a6c51600-f788-45ba-a82f-d73208a81cb7",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "3",
+                "value": "0"
+              },
+              {
+                "label": "12",
+                "value": "1"
+              },
+              {
+                "label": "25",
+                "value": "2"
+              },
+              {
+                "label": "34",
+                "value": "3"
+              },
+              {
+                "label": "42",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Pseudokode (4%)</h3><p>Betragt følgende pseudokode</p><p><img src=\"data:image/png;base64,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\" alt=\"While-Loop(x)\n\ny ← 2 ·x\n\nS ← 0\n\nwhile y &gt; 1 do\n\nS ← 2 ·S + y\n\ny ← y-2\nend\n\nreturn S\" width=\"159\" height=\"169\" style=\"max-width:100%;height:auto\"></p><p>Hvad returneres når koden kaldes med input \\(x=3\\)?</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Pseudokode (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "3"
+                ]
+              },
+              "penalty": 1
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Vi får før whileloopet er \\(y=6\\) og \\(S=0\\). Herefter sker følgende i hver iteration:</p><ul><li>Iteration 1: \\(S=0\\cdot 2+6=6\\), \\(y=6-2=4\\)</li><li>Iteration 2: \\(S=6\\cdot 2+4=16\\), \\(y=4-2=2\\)</li><li>Iteration 3: \\(S=16\\cdot 2+2=34\\), \\(y=2-2=0\\)</li></ul>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "6b9b1261-13f3-45fa-ac5c-e4fec4f533b0",
+      "title": "RAM-model (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "7a1b41fb-f589-443a-9fc3-bfa3732dee96",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "7a1b41fb-f589-443a-9fc3-bfa3732dee96",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(b = \\sum_{i=1}^{n} A[i]\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(b - a\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(b = A[3]\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(b = A[a^{3}]\\)",
+                "value": "3"
+              },
+              {
+                "label": "\\(b = A[b^{a}]\\)",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>RAM-model (4%)</h3><p>Hvilke af følgende operationer har konstant tidskompleksitet i RAM-modellen? Antag at \\(a,b\\) er heltalsvariabler og \\(A\\) er et array.</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "RAM-model (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 1.333,
+                "value": [
+                  "1",
+                  "2",
+                  "3"
+                ]
+              },
+              "penalty": 2
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<ul><li>Den første operation har tidskompleksitet \\(O(n)\\), da både addition og tabelopslag skal udføres \\(n\\) gange.</li><li>En subtraktion har konstant tidskompleksitet \\(O(1)\\).</li><li>Et enkelt opslag i \\(A\\) tager \\(O(1)\\) tid.</li><li>\\(a^{3}\\) er et konstant antal multiplikationer, så opslaget \\(A[a^3]\\) har også konstant tidskompleksitet \\(O(1)\\).</li><li>\\(b^{a}\\) kan tage \\(\\log a\\) multiplikationer i værste tilfælde.</li></ul>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "fe2f3dbb-1905-4436-b877-7a9d2cd7dec4",
+      "title": "Mængder og heltal (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "b58ec4b4-2cbf-4fdb-95a6-d368119108cc",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "b58ec4b4-2cbf-4fdb-95a6-d368119108cc",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(\\sum_{a \\in A} a = 2041\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(\\text{GCD}(B) = 2500\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(\\sum_{b \\in B-A} b=\\sum_{b \\in B} b-\\sum_{a \\in A} a\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(A \\subseteq B\\)",
+                "value": "3"
+              },
+              {
+                "label": "\\(\\sum_{b \\in B} b = 5\\cdot 250\\cdot 501\\)",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Mængder og heltal (4%)</h3><p>Lad \\(A = \\{5, 10, 2026\\}\\) og \\(B = \\{5k \\mid k \\in \\{1,\\dots,500\\}\\}\\). Hvilke af følgende udsagn er sande?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Mængder og heltal (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 2,
+                "value": [
+                  "0",
+                  "4"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>\\(\\sum_{a \\in A} a=5+10+2026=2041\\). \\(\\text{GCD}(B)=5\\). \\(\\sum_{b \\in B-A} b=\\sum_{b \\in B} b-5-10\\), vi skal ikke trække 2026 fra som vi gør i udtrykket \\(\\sum_{b \\in B} b-\\sum_{a \\in A} a\\). Da \\(2026\\notin B\\) har vi ikke \\(A \\subseteq B\\). Vi har \\(\\sum_{b \\in B} b=\\sum_{k=1}^{500} 5k=5\\sum_{k=1}^{500} k=5\\cdot 250\\cdot 501\\).</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "6491f0d7-4337-430c-9134-3cd254817a17",
+      "title": "Modulo-beregning (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "d9cf55de-02d3-4e32-bb14-1e45a00e39c8",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "d9cf55de-02d3-4e32-bb14-1e45a00e39c8",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(0\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(2\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(6\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(8\\)",
+                "value": "3"
+              },
+              {
+                "label": "\\(10\\)",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Modulo-beregning (4%)</h3><p>Vi minder om at for heltal \\(a\\) og \\(n\\) bruger vi notationen \\(a\\text{ mod }n\\) til at betegne restklassen af \\(a\\) modulo \\(n\\). Hvad er værdien af følgende udtryk? \\[\\begin{aligned} (58\\text{ mod }8) \\cdot \\left((5214\\text{ mod }4)+ (8627\\text{ mod }5)\\right) \\end{aligned}\\]</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Modulo-beregning (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "3"
+                ]
+              },
+              "penalty": 1
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Vi har at \\(58\\text{ mod }8 = 2\\), \\(5214\\text{ mod }4 = 2\\) og \\(8627\\text{ mod }5 = 2\\). Så regnestykket bliver \\(2 \\cdot (2 + 2) = 8\\).</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "cc77de15-208c-423f-ab08-9c364add7652",
+      "title": "Negation af udsagn (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "f5785f0a-9853-4d41-97f5-1118151c8f50",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "f5785f0a-9853-4d41-97f5-1118151c8f50",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(\\forall x \\in X \\; \\forall y \\in Y : y \\nmid x^{2}\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(\\forall x \\in X \\; \\exists y \\in Y : y \\nmid x^{2}\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(\\exists x \\in X \\; \\exists y \\in Y : y \\nmid x^{2}\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(\\exists x \\in X \\; \\forall y \\in Y : y \\nmid x^{2}\\)",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Negation af udsagn (4%)</h3><p>Hvad er negationen af følgende udsagn? \\[\\begin{aligned} \\forall x \\in X \\; \\exists y \\in Y : y \\mid x^{2}. \\end{aligned}\\]</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Negation af udsagn (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "3"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>For at negere udsagnet, laves alle \\(\\exists\\) om til \\(\\forall\\) og omvendt, og den indre funktion \\(y \\mid x^{2}\\) negeres, som bliver til \\(y \\nmid x^{2}\\).</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "590e81c9-4751-4eef-9ef4-4c132e70b37c",
+      "title": "Max-Heap (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "02b9ada9-f2b7-479c-a53c-3c94f1272b1e",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "02b9ada9-f2b7-479c-a53c-3c94f1272b1e",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(\\langle 6, 4, 5, 1, 2, 3 \\rangle\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(\\langle 6, 5, 4, 1, 2, 3 \\rangle\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(\\langle 6, 5, 4, 3, 2, 1 \\rangle\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(\\langle 6, 5, 3, 1, 2, 4 \\rangle\\)",
+                "value": "3"
+              },
+              {
+                "label": "\\(\\langle 6, 3, 4, 5, 2, 1 \\rangle\\)",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Max-Heap (4%)</h3><p>Du kører BUILD-MAX-HEAP på arrayet \\(A = \\langle 3, 1, 6, 5, 2, 4 \\rangle\\). Hvilken hob (heap) får du som resultat?</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Max-Heap (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "1"
+                ]
+              },
+              "penalty": 1
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Når BUILD-MAX-HEAP køres bottom-up på arrayet, flyttes den største værdi til roden, og hobegenskaben sikres rekursivt for alle undertræer. Det endelige array bliver \\(\\langle 6, 5, 4, 1, 2, 3 \\rangle\\), hvor ingen knude har et barn med større værdi end sig selv.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "41a480bf-cc3a-4027-b75d-e62dec711d3a",
+      "title": "Repræsentation af hægtet liste i array (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "188860a2-0ed6-4067-a997-9c257ff69186",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "188860a2-0ed6-4067-a997-9c257ff69186",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(3 \\rightarrow 7 \\rightarrow 8 \\rightarrow 5\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(10 \\rightarrow 3 \\rightarrow 8 \\rightarrow 5\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(10 \\rightarrow 2 \\rightarrow 7 \\rightarrow 9\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(4 \\rightarrow 3 \\rightarrow 10 \\rightarrow 8\\)",
+                "value": "3"
+              },
+              {
+                "label": "Dette array definerer ikke nogen liste.",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Repræsentation af hægtet liste i array (4%)</h3><p>Hvilken enkelthægtet (singly linked) liste \\(L\\) repræsenteres af dette array \\(A\\)? Pointeren \\(L.\\text{head}\\) (dvs.&nbsp;index på det første listeelement) står i \\(A[0]\\). Hvert listeelement gemmes i to nabofelter \\(A[i]\\) og \\(A[i+1]\\), hvor \\(A[i]\\) indeholder nøgleværdien og \\(A[i+1]\\) indeholder en pointer (index) til det næste listeelement.</p><p>\\[\\begin{aligned} A[0:10] = \\langle 4, 0, 3, 7, 10, 2, 0, 8, 9, 5, \\text{NIL} \\rangle \\end{aligned}\\]</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Repræsentation af hægtet liste i array (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "1"
+                ]
+              },
+              "penalty": 1
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Pointeren \\(L.\\text{head}\\) står i \\(A[0]\\), så vi starter ved index \\(4\\).</p><ul><li>Ved index \\(4\\) står nøglen \\(A[4] = 10\\) og pointeren \\(A[5] = 2\\).</li><li>Ved index \\(2\\) står nøglen \\(A[2] = 3\\) og pointeren \\(A[3] = 7\\).</li><li>Ved index \\(7\\) står nøglen \\(A[7] = 8\\) og pointeren \\(A[8] = 9\\).</li><li>Ved index \\(9\\) står nøglen \\(A[9] = 5\\) og pointeren \\(A[10] = \\text{NIL}\\), så listen slutter her.</li></ul><p>Derfor repræsenterer arrayet listen \\[\\begin{aligned} 10 \\rightarrow 3 \\rightarrow 8 \\rightarrow 5. \\end{aligned}\\]</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "fabda061-7e09-484f-8ec9-13db9b727b55",
+      "title": "Cuckoo hashing (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "069530ea-a407-43f6-b3d2-6a488cee8418",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "069530ea-a407-43f6-b3d2-6a488cee8418",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "Tabellen ender som \\(\\langle A, B, C, D, K, E \\rangle\\).",
+                "value": "0"
+              },
+              {
+                "label": "Tabellen ender som \\(\\langle D, A, B, C, K, E \\rangle\\).",
+                "value": "1"
+              },
+              {
+                "label": "Tabellen ender som \\(\\langle D, A, B, C, E, K \\rangle\\).",
+                "value": "2"
+              },
+              {
+                "label": "Der opstår en uendelig løkke under indsættelsen, så der vil ske en rehashing.",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Cuckoo hashing (4%)</h3><p>I nedenstående hashtabel er der indsat 5 nøgler med cuckoo hashing. Hver nøgle har to mulige positioner; pilene viser den alternative placering af hver nøgle, så f.eks. kan \\(A\\) flyttes mellem position \\(0\\) og \\(1\\), \\(B\\) mellem \\(1\\) og \\(2\\), osv.</p><div style=\"text-align:center\"><p><img src=\"data:image/png;base64,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\" alt=\"[figure]\" width=\"128\" height=\"208\" style=\"max-width:100%;height:auto\"></p></div><p>Vi vil nu indsætte en ny nøgle \\(K\\) med mulige positioner \\[\\begin{aligned} h_{1}(K) = 5, \\qquad h_{2}(K) = 4. \\end{aligned}\\]</p><p>Hvad er den endelige tilstand af hashtabellen efter indsættelsen af \\(K\\)?</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Cuckoo hashing (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "1"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Indsættelsen forløber således:</p><ul><li>\\(K\\) indsættes i position \\(5\\), så \\(E\\) fortrænges til sin alternative position \\(3\\).</li><li>\\(E\\) indsættes i position \\(3\\), så \\(D\\) fortrænges til sin alternative position \\(0\\).</li><li>\\(D\\) indsættes i position \\(0\\), så \\(A\\) fortrænges til sin alternative position \\(1\\).</li><li>\\(A\\) indsættes i position \\(1\\), så \\(B\\) fortrænges til sin alternative position \\(2\\).</li><li>\\(B\\) indsættes i position \\(2\\), så \\(C\\) fortrænges til sin alternative position \\(3\\).</li><li>\\(C\\) indsættes i position \\(3\\), så \\(E\\) fortrænges til sin alternative position \\(5\\)</li><li>\\(E\\) indsættes i position \\(5\\), så \\(K\\) fortrænges til sin alternative position \\(4\\) som er tom. Da \\(K\\) bliver indsat på en tom plads, stopper indsættelsen her.</li></ul><p>Den endelige tabel er derfor \\[\\begin{aligned} \\langle D, A, B, C, K, E \\rangle. \\end{aligned}\\]</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "128c2edf-c0c4-44f0-853f-6b24e30e3bdd",
+      "title": "Funktioner (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "d903a0c8-78a4-4bcc-9121-ce68736364f0",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "d903a0c8-78a4-4bcc-9121-ce68736364f0",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(x^{2}\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(|x|\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(x^{3}\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(e^{x}\\)",
+                "value": "3"
+              },
+              {
+                "label": "\\(2x + \\sin(x)\\)",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Funktioner (4%)</h3><p>Hvilke af følgende funktioner \\(f: \\mathbb{R} \\to \\mathbb{R}\\) er bijektioner?</p><p>Vælg ét eller flere korrekte svar.</p>",
+            "title": "Funktioner (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 2,
+                "value": [
+                  "2",
+                  "4"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>\\(x^{2}\\) er ikke injektiv, da \\((-1)^2 = 1^2 = 1\\). \\(|x|\\) er ikke injektiv da \\(|-1|=|1|=1\\). \\(x^{3}\\) er både injektiv og surjektiv, og dermed bijektiv. \\(e^{x}\\) er ikke surjektiv, da der ikke findes noget \\(x \\in \\mathbb{R}\\) så \\(e^{x} &lt; 0\\). \\(2x + \\sin(x)\\) er både injektiv (da den afledte er \\(2 + \\cos(x)\\geq 1&gt; 0\\)) og surjektiv, og dermed bijektiv.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "50cad07a-cbf7-422c-87ce-238281d0ef0e",
+      "title": "Matrixudregning (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "91409e61-78a8-476a-b07a-1cfa60a9bafa",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "91409e61-78a8-476a-b07a-1cfa60a9bafa",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(\\displaystyle \\begin{bmatrix} 2 &amp; 1\\\\ 0 &amp; 3 \\end{bmatrix}\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(\\displaystyle \\begin{bmatrix} 2 &amp; 4\\\\ 0 &amp; -3 \\end{bmatrix}\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(\\displaystyle \\begin{bmatrix} 4 &amp; 2\\\\ 0 &amp; 6 \\end{bmatrix}\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(\\displaystyle \\begin{bmatrix} 1 &amp; 0\\\\ 0 &amp; 1 \\end{bmatrix}\\)",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Matrixudregning (4%)</h3><p>Lad \\[\\begin{aligned} A = \\begin{bmatrix} 2 &amp; 1\\\\ 0 &amp; 3 \\end{bmatrix},\\quad B = \\begin{bmatrix} 1 &amp; 2\\\\ 0 &amp; -1 \\end{bmatrix},\\quad C = \\begin{bmatrix} 0 &amp; -2\\\\ 0 &amp; 2 \\end{bmatrix}. \\end{aligned}\\] Beregn udtrykket \\(A B + A C\\).</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Matrixudregning (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "0"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Vi kan bruge distributivitet:</p><p>\\[\\begin{aligned} A B + A C = A(B + C). \\end{aligned}\\]</p><p>Da \\(B + C = I_2\\), får vi \\[\\begin{aligned} A(B + C) = A \\cdot I_2 = A. \\end{aligned}\\] Altså er</p><p>\\[\\begin{aligned} A B + A C = \\begin{bmatrix} 2 &amp; 1\\\\ 0 &amp; 3 \\end{bmatrix}. \\end{aligned}\\]</p><p>Hvis man i stedet regner direkte: \\[\\begin{aligned} AB = \\begin{bmatrix} 2 &amp; 1\\\\ 0 &amp; 3 \\end{bmatrix} \\begin{bmatrix} 1 &amp; 2\\\\ 0 &amp; -1 \\end{bmatrix} = \\begin{bmatrix} 2 &amp; 3\\\\ 0 &amp; -3 \\end{bmatrix}, \\quad AC = \\begin{bmatrix} 2 &amp; 1\\\\ 0 &amp; 3 \\end{bmatrix} \\begin{bmatrix} 0 &amp; -2\\\\ 0 &amp; 2 \\end{bmatrix} = \\begin{bmatrix} 0 &amp; -2\\\\ 0 &amp; 6 \\end{bmatrix}, \\end{aligned}\\]</p><p>og dermed</p><p>\\[\\begin{aligned} AB + AC = \\begin{bmatrix} 2 &amp; 3\\\\ 0 &amp; -3 \\end{bmatrix} + \\begin{bmatrix} 0 &amp; -2\\\\ 0 &amp; 6 \\end{bmatrix} = \\begin{bmatrix} 2 &amp; 1\\\\ 0 &amp; 3 \\end{bmatrix}, \\end{aligned}\\]</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "d8bd42c7-6fda-4c88-88b9-ea40c8adbb83",
+      "title": "Pokerhænder (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "99148e27-9cbe-431b-b780-1c1a8eecc843",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "99148e27-9cbe-431b-b780-1c1a8eecc843",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(13\\cdot \\binom{4}{3}\\cdot 4\\cdot \\binom{12}{2}\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(13\\cdot \\binom{4}{3}\\cdot 4\\cdot 12\\cdot 11\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(13\\cdot \\binom{4}{3}\\cdot \\binom{4}{2}\\cdot \\binom{12}{2}\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(13\\cdot \\binom{4}{3}\\cdot 4\\cdot \\binom{13}{2}\\)",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Pokerhænder (4%)</h3><p>Vi spiller med et almindeligt sæt på 52 spillekort (4 kulører og 13 værdier). En hånd består af 5 kort, der trækkes tilfældigt uden tilbagelægning. Hvor mange hænder findes der af denne type:</p><ul><li>Tre af kortene har samme værdi.</li><li>De resterende to kort har andre værdier, men samme kulør som hinanden.</li></ul><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Pokerhænder (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "0"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>De tre kort med samme værdi kan vælges på \\(13\\cdot \\binom{4}{3}\\) måder. Kuløren af de resterende kort kan vælges på 4 måder, og så skal vi vælge 2 ud af de 12 resterende værdier. Dermed får vi \\(13\\cdot \\binom{4}{3}\\cdot 4\\cdot \\binom{12}{2}\\).</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "c7add1f5-264b-4816-9820-4f31b2e28531",
+      "title": "Forventet Værdi (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "69c919a4-6683-4c33-acd9-e74dd9113e92",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "69c919a4-6683-4c33-acd9-e74dd9113e92",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "24",
+                "value": "0"
+              },
+              {
+                "label": "28",
+                "value": "1"
+              },
+              {
+                "label": "36",
+                "value": "2"
+              },
+              {
+                "label": "49",
+                "value": "3"
+              },
+              {
+                "label": "64",
+                "value": "4"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Forventet Værdi (4%)</h3><p>Lad \\(X_{1}, X_{2}, X_{3}, X_{4}\\) svare til resultaterne af fire uafhængige kast med en almindelig seks-sidet terning. Hvad er den forventede værdi (expected value) af \\((X_{1} + X_{2})\\cdot (X_{3}+X_{4})\\)?</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Forventet Værdi (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "3"
+                ]
+              },
+              "penalty": 1
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Da \\(X_{1} + X_{2}\\) og \\(X_{3} + X_{4}\\) afhænger af forskellige terningekast, er de uafhængige, og da er den forventede værdi produktet af deres forventede værdier: \\[\\begin{aligned} \\mathbb{E}[(X_{1} + X_{2}) \\cdot ( X_{3} + X_{4})] = \\mathbb{E}[X_{1} + X_{2}] \\cdot \\mathbb{E}[ X_{3} + X_{4}] = (\\mathbb{E}[X_{1}] + \\mathbb{E}[X_{2}]) \\cdot (\\mathbb{E}[ X_{3}] + \\mathbb{E}[X_{4}]) \\end{aligned}\\] Da den forventede værdi af et enkelt kast med en seks-sidet terning er \\[\\begin{aligned} \\mathbb{E}[X_{i}] &amp;= \\frac{1+2+3+4+5+6}{6} = 3.5 \\end{aligned}\\] får vi resultatet \\[\\begin{aligned} \\left( 3.5 + 3.5\\right)^{2} = 7^{2} = 49. \\end{aligned}\\]</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "a5417220-9781-410c-b517-e03934d5d6bf",
+      "title": "Dijkstras algoritme (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "2084169c-53cc-4677-9f47-d8ad93d92454",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "2084169c-53cc-4677-9f47-d8ad93d92454",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(A C B E D\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(A B C E D\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(A C B D E\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(A C D B E\\)",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Dijkstras algoritme (4%)</h3><p>Betragt den følgende vægtede, orienterede graf:</p><div style=\"text-align:center\"><p><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwMAAAIBCAIAAACa//TLAAAACXBIWXMAADsOAAA7DgHMtqGDAAAgAElEQVR42uzde2AU5aH//yfJEigBIWp0EZBwqSKYhXpDCBYpK8qlAmLRDVTFalsVYpVaTmmPGDyo1UI1UalFDi2SRMOlpSWhQBDFTRAEhc0BFJANQmDJcs8uIewm+f3xfH9z5mwg5LKzOzP7fv2V3SSzs8/uPPN5LvNMXH19vQAAAIhJ8RQBAAAgCQEAAJCEAAAASEIAAAAkIQAAAJIQAAAASQgAAIAkBAAAQBICAAAgCQEAAJCEAAAASEIAAAAkIQAAAJIQAAAASQgAAIAkBAAAQBICAAAgCQEAAJCEAAAASEIAAAAkIQAAAJIQAAAASQgAAIAkBAAAQBICAAAgCQEAAJCEAAAASEIAAAAkIQAAAJIQAAAASQgAAIAkBAAAQBICAAAkIQAAAJIQAAAASQgAAIAkBAAAQBICAAAgCQEAAJiIhSIAAKjt27fv8OHDhw8ftlgs11xzzXXXXde3b9+4uDhKBiQhAIBplZeXL1iwoKCgoLy8PORXV1999YgRI6ZMmTJmzBgiEUwmrr6+nlIAgFh24cKFN954Y+7cudXV1b169br77ru7d+9eX19fUVHx2Wef7d27V/nLtLS01157bfTo0RQaSEIAADPw+/0TJkxYv359r169/vjHP06YMCHkD7744otf/epXpaWlyjPPPffca6+9lpiYSOmBJAQAMLALFy4MHz68tLT0+eeff+WVV9q2bXvRP6uvr/+P//iP119/XXlm/Pjxy5cvT0hIoAxhdFw7BgCx6ze/+U1paeljjz02b968S8UgIURcXNwf/vCHZ555RnnmH//4x/Tp0ylAmAB9QgAQo5xO51133TV8+PC1a9e2adPmsn9fXV09YMCAffv2Kc98/PHHw4cPpyRhaPQJAUCMevnll4UQr7/+elNikBDie9/73osvvqh+5le/+lVdXR0lCUOjTwgAYtE333zTt2/foUOHfvbZZ03/r5qamq5du544cUJ55rPPPhs6dCjlCeOiTwgAYlFRUZEQon///uvXrz99+nQT/6tt27Yhw2F///vfKUyQhAAABrNp0yYhxHvvvTdy5MhevXpt2LChif84ePBg9cNPPvmEwgRJCABgMBUVFcrPp06deuKJJ5r4j927d7/UdgCSEADAGM6cOaN+WF5efvLkyab841VXXaV+WFlZGQwGKU+QhAAARtK7d2/1w86dOycnJzflHy9cuPB/ziLx8ayvCJIQAMBgfv/73yclJSkPX3rppSbeWlV94ZgQ4qqrruKerDA07kUPALFoyJAhmzdvXrx48fnz5ydMmHDPPfc08R/37NmjfnjDDTdQmCAJAYhRfr/f6/WWlpaePHlSuUPnxo0bPR6P/NlqtSoXXQ8ZMuTKK68cMmRISkqKujcC0ZKWljZ//vzm/tfWrVvVD0eMGEFJRl0wGDx8+HBFRcXBgwdXr14tn9y1a5fL5VL+xm63p6SkCCFSUlIGDRqUlpbWsWPH1NRUSo+VFQE0j9frXb9+/erVq/Pz81uzHYfDMXbs2HvuuUfWzjCEY8eOde/ePRAI/L9TSFycy+W6+eabKZmotEN27NixYcOGFStWqBNPc9nt9nHjxg0bNuymm26yWGKxf4QkBKBJysrK/v73vy9YsEDp7wmpTFNSUsaOHXupf1+9erXX6y0uLm74K6vV+tRTT02YMCEtLY1y1rnXXnvtt7/9rfLwxz/+8T//+U+KJcIBaPHixQsXLrxo+pG9sH379u3Tp89F/33Lli1er/dSzRi73f7cc8+NHDkypiIRSQhAY7xe70cffTR37tyQAGS326dOndqCoS5lQK1hr5LVav3d73730EMP0UukT/X19X369Dlw4IB8mJiYuG3bNvJrZASDwXXr1v3pT38KaU7YbLaJEyeOGDGia9euzRrqkgNqu3fvXrt2bUFBQcgBnpmZOWnSpPT09Fj5ZgNAQ2632+FwhCSVnJwcl8sVCATC8hKBQMDlcuXk5FitVvULORwOt9vNR6A3q1atUn9Mc+fOpUwiwOfzNTxGMjMznU6nz+cL16tUVlYWFhba7faQmOV0OsN1vOsWSQjA5TNQZmamy+XS9EVdLldWVhZ5SLf8fn/Pnj2VT+eee+4JBoMUi9YZKOSgsNvthYWFmkYTGbxsNpu6CZSbm2viPEQSAvB/KkF1Bop8DRgIBHJzc9XNX4fDEcaGL1rshRdeUD6Ufv36nT59mjLR+kAIaY1EuGHgdDrVXURWq9XpdJKEAMRKzRvdVmDDPGTuJqn+7dixQ5lC2717d/rqNOV2u9VdMllZWVFsDIT0EJuyZUISAhBa8+okdoSEM5vNxgk4Kk6dOqUsn9ilS5d9+/ZRJtp95zMzM9Wxo7KyUg875nK5QqoIkhAA81CnDf3UvIrKykp1k9RkVbD+1dbW3nfffUpP4Z49eygT7b7qStrQ4VBUSMvE4XCYppuWJATEdANUCRlWq7WwsFC3u1pYWKgMlpmpCtY/ZXrQ9ddfv3fvXgpEu2+4ejhMt99wn8+nTB6yWq3m6KYlCQGx2wBVsoXdbtdbV9BFd1hdBet/h01g4cKFssD79Olz8OBBCkQjygViRpmVnJOTo+Q2E0yjJgkBsR6D9NwADREIBNTnDMKQpv71r38lJCQIIdLS0o4ePUqBaPSVVvK9IRokCpfLpa5DSEIAjMTpdCpVmBHbc06n0/SX9Ubd5s2b27dvL4QYPHjwyZMnKRCtY5ARx3zVE5sMHYZIQkDMxSATdGub413o1jfffHP11VcLIe69916/30+BaB2DjBsjzPEuuO8YEEPKy8vlMsFWq9Xlchn69l5er9dms8mbJbnd7mbdcQmN8Hg8Q4YMcbvdP/nJT3Jzc9u0aUOZaHETsVGjRsk7iGVlZb344ou8lyiK5xsJxAiv1zt48GBzxCAhREpKijJTYfDgwV6vl4+49aqqqkaPHu12uydPnpyfn3/ZGPTvf/97/PjxtKhjNgYJISwWy5o1a2TP0OzZs99++22SEACdxiClB2XdunXmuNl7SkrKunXrhBAej8dmsxGGWikQCDzwwANfffXVI488smTJEjldunHFxcX/8z//ExcXR+k13SuvvGKaGNQwDE2fPr2kpIQkBEB3bdCMjAwZg5xOZ1pammneWlpampwz5PF4MjIygsEgH3fL1NfXT506tbi4+JFHHlm8eHF8fJPODjt37uzbty+l13R5eXmzZ88WQjgcDnPEIHUYkn20Q4cOLS8vJwkB0GMbNDc3Nz093WTvLj09XS59W1xc/Morr/Bxt8zMmTNzc3Mfe+yxpseg+vr67du333jjjZReE5WXl0+ePFkIYbfblyxZYrJ3Z7FY1APWRmqWMIEfiJGLxRwOh4nfprJYNpeStcCbb74phPjZz35WV1fX9P/auXOnEOK9996jAJt4mZVMCeZeCsuIFQ59QoCZ+f3+Bx98UFa+5muDqi1ZskSeZh588EG/389H33TLli17/vnnf/WrXy1cuLBZM36WLl0qhKBPqIkeeeQROUK9fPlyc0zUu1QfrVz+ND8/Py8vzxD7zFX0gJllZGTk5+eL2LjOXFkjwOFwGKUKjrpPPvnkvvvuu/rqq6dMmXLZGFRXVxcMBqurq48fP37gwIEvv/yyvr7e4/Fce+21lGTjSkpKhg4dKkw0S7oRysVxVqt1//79SUlJJCEA0VFWViZXgM3JyZk2bVosvOW8vDw5D8PlcplpYrh235C77rrrzJkzLd5Cp06dTp8+TUleNhl0795dXuG4fft2i8Vi+rfs9XqvueYaozRLGB0DTFv5TpkyRQhhs9l++ctfxsi7njRpkgx/U6ZM4Tqyxh06dGjUqFGtiUGCobGm+fOf/yzHxZYuXRoLMUgIkZKSIu/Smp+fX1ZWRhICEAUFBQUulyumKl8hhMVikZNXXC7Xn//8Z74GjXjooYcqKipauRGS0GX5/f7p06cLIRwOR0z1U/7yl7+UU/dkk0zX9QZfU8B8gsHgjBkzWl/57t27d8GCBa3cmfbt26ekpKSkpPTv399mszXxCu0WS0tLczgc+fn5c+fO/eUvfxk7KbC5jh492vqNkIQua968eUIIq9W6cOHC1mxn9+7dGzdujMAOjxo1qlevXmFplixfvnzo0KEul6ukpETX63dwZSNgPnJ9HSGE2+1uzXbkKkRh1Llz5/Hjx69Zs6ZZV2s3l9vtli+Xm5vLlwFR5PP55Fex9Xcnff/99yOTCsK7LIIcrbbZbHr+mJgxDZiwQ0hOz2z9XMXjx49v2bKltrb2/Pnzx44d+/zzzwsKCkLm3/z85z9PT0/v3LnzRW/OUFtbe+zYse+++27t2rVffPGF8vxNN930+uuvjx07VqNCkBfNWa3WQ4cO0S2EaJkzZ45cUdrn87XyEqrdu3d//PHHtbW11dXVR48e/fTTT+V6TmoDBw68//77k5OTL3XDuGAwWFVV5fP5Tp486XK5XC5XdXV1yN/87ne/+6//+q9wlYBy0ZzT6dRvtxCZHaBDqOlmzZqlrkAGDRrU9P8tKysLqQqnTp3q8/noFgIdQi0watSokGHoqqqqZm0hGAyuWbNmzJgx6gUUpkyZEt791H+3EDOmAbP5wx/+IIRwOBxaLCA0YsQI9cNu3bo1/X9vvvnmTZs2Pf3008ozixcvHj16tBYLIaampspVp2VpAJG3ePFi+YOctBd2DzzwgPqh1Wrt0KFDs7aQkJBw3333rV69esWKFcr/fvfdd+Hdz3fffVcI4XK5dHsRGUkIMJXy8nJ5ydgzzzyjxfavuOIK9cNLdcJfssaJj3/77bcnTpyoPLNp06bx48drMUwvS0DP9S/MTU6RzszM1GhpwU6dOqkfJiYmtnhTEyZM+Pe//y0HuMOehNLT0+VFZH//+99JQgA0J2+pYbVaNRqSb9bdGC61hXfeeadz587KM8XFxe+8807Yd1X/9S9ioU0yadIkrc7fYb0MMz09/de//rUQ4vDhw3V1deHd1aeeekoIsWDBAn2u8kUSAswjGAzKi95lvaNb11577c9//nP1M7NmzVImVcRO/QvaJLoyc+bMdu3aBYPBsKyw0PBI9Hg8W7ZsIQkB0NCWLVvkUraPPPKIznf1pz/9qfphVVVVQUGBRklIt/UvTMwQbZIQycnJcuQ67ANkKSkpct60Foc5SQjA/9qwYYNshur/Zqt9+/YNmWO0evXqsL+KUv/KkgEio7y8XLZJJkyYYKw9//GPf6xFEhJCPPnkk0KI7OxskhAADa1YscIozVCLxdKnTx/1M8p17+El27iyZIDIKC0tlT8Y7vYaQ4YM0SgJKYuHlZeXk4QAaMLv98sZmiEXuuuWvFW1opW3Ar0UWRoul0uLa/WBi5IdnHIdB2Pp3r17ly5dtEhCSke1EhNJQgDCbMeOHfKHgQMHGmKHjx07pn7YrKWJmk4pDaV8AK3l5+cLVS+Isdx4441aJCElGmoxDk4SAiCEEF999ZUQwmazabR4SXidPHly37596mfuuusuLV4oKSlJThWS5QNoTRn9kSNNevPiiy/ecsstjfxB7969Dx48qMVLy2goYyJJCED4yT7n/v37G2Jv//nPf9bW1ioP4+LiJk+erNFryTLRYZ88dC4YDJaUlDT3vyoqKuQPGnVzttKZM2eqqqoa+YM777zz6quv1uKllVlTehuqJgkBJrFr1y5hkA75urq6kJtgPP744/369dPo5WSZbNy4kS8JmsVisRw8eHDAgAHNykOyQ8Vqterz1r+nT59u/A+eeOKJ4uJiLV5arnQqhPB6vSQhAOEnp0ur127WrXnz5n399dfKwxtuuOH111/X7uV69OghhJBXNQPNkpGR0b9//6FDhzY9D8nFq4YPH67Pd6TRHKCmSElJkT/s3r2bJAQgzJSpCdr1rIRLcXGx+ob2PXr0+Pe//33llVdq94pdu3YNKSWg6ZYsWWK1Wl0uVxPzkDzN9+3bV4fvpaamZuvWrVHcATlp77L9UiQhAC2nz6kJiqVLl44ZM0a598WIESO2bdvWs2fPWC4T6JzFYtm8ebP8uSl5SA4thSyXpRPvvPPOuXPnorgDctKe3i4fIwkBZqu19bljO3fuHD169E9/+tMLFy7IdPLBBx+sX79eo7mZhigTGEVqampubq7ysOn9Q/pRU1OTnZ09c+ZMPs2LVBEUAWAC0Rp393g8l7qRRX19fVVV1dGjR7/99tvCwsJvvvlGCNGxY8e77777scceu//++yMfUHbv3q3/+5BAnzIyMlavXq2+AlzmIZvN9u677za8zaqcnRZJJ06cmDdvXsgxWF1dffbs2W+++Wbz5s3Hjx+PejHqc9CQJASYQbTG3T/55JNPPvmkiX+cnJzscDhuv/32gQMHRqWfRm+zE2AsS5Ys2bhxY8jU+0vlIWV2WsR4vd5f//rXOi9DfQ4akoQAtNzDDz982XXS6urqjh49evDgwcLCwqVLl7777rtCiMGDBz/22GNTp04NuQ+rpiZPnqzdqkWIZUoemj9/frT2oUuXLq+++qr6mfr6+nPnzp09e/brr7/etGmTRrf2a1loIwkBiCHx8fFdu3bt2rXrkCFDZs+e/corr7zyyiubN2/evHnzH//4xz/+8Y/333+/1vtgtVq5ih5aq6ysjOI16p06dXr00UcbaZDk5eX9/Oc/r66u5pMKraMoAgARk5iY+NJLL/3jH/9ITEwUQuzbt2/cuHEzZsxQrzetBRmDcnNz64GWCgQC8iLwi0bt3NzcQ4cOTZ06VbcNkilTprz55pt62BllYSGSEICwMcSCiorRo0f/93//t/Jw/vz5Dz30UF1dHZ8j9GzGjBly/dKLZqCMjAz17Dflnhu68vjjj3fs2DGKO7B//376hABoQv8LKoaYPHnyuHHjlIcrVqz4zW9+o/WL6vOOmDCEoqKi7OzspmQgSaObmLaSxWK54447orgD6sXlSUIANKEsWqh/L7/8svrh/PnzP//88xgvE+iT1+sdM2ZMEzOQznXv3r0pf7Zp06borkZNEgLQQocPHzbKrqalpQ0dOlR5WF9f//zzz8d4mUCfrQu73d70DCT/+OTJk/p8O506dWrKnz3++OMrVqwI+6vLG0XrrXeWJASYgbJgoD5nJ1zKvffeq364efPmffv2hf1VlDJhWUW0gJwe1PR+IDlUXVpaqs+307Vr1169ejX+N+fOnXO73TfeeGPYX11OtLrsDpCEALSEvKpFn7MTLmXQoEEhz2hxQyJZJlarlS8JmquoqKigoKBZY2HyW71x40Z9vqMXXnhh7dq1jf/Nnj176urqwr4etLKMkN7mNZKEAJPQ560NG9elS5eQZw4cOBD2V5FlMnz4cL4kaJZgMHj69OnmzgeS99kw9PpVX375pRAi7H1CSplwFT0ATcihdzkMbxTf+973Qp7R4oYY+pyaAP2zWCwtmBOt3GejvLzcoG+8pKQkJSXlqquuCu9my8rK5A9JSUkkIQDh94Mf/EAI4XK5/H6/Ufb52LFjIc9069YtvC/h9/vl1ARZPoDWlOloup0qdFmfffaZFrdKlb2zDodDb++XJASYxMCBA+UPO3bsMMo+79mzJ+SZsE+lVEpDKR9Aa/Jkb6yhasXevXsPHDigRRKS9ygcO3YsSQiAJpKSkuSk6Q0bNhhln9esWaN+mJCQ8OMf/zi8LyFLw2az6a1DHiYmT/aXvTmxPn3wwQdCiLAnIWWsUIfj1CQhwDwmTpwohNBiFRAtVFRUhDSa7XZ72K/wkqUhSwaIDOVkb7ipQoFAYMmSJVokIeVg1+FiFiQhwDxGjBghhHC5XMrVqnr20ksv1dTUKA8TEhJee+218L6E1+uVk4RkyQCRkZqaKjO9TBUGMn/+/O+++06LJLRw4UIhRGZmpg7fNUkIMI9BgwbJ+nfBggU639Vly5a9//776meee+65sE/lUcqh4cJFgKaeeuopQxyJat98882cOXOEEG3btg1vz43SJpk0aRJJCICGLBaL1vWvuhdHCNGyG8j/85//fOyxx9TPTJw4MewdQko5ZGVlGe7mUDC6CRMmCCE8Ho9y6bg+D0bFjh07fvjDH547d04IccMNN8THx4f9SNRtm4QkBFD/NkPIPbxkvdl0VVVVv/vd7yZMmKD+x4cffjgvLy8hISG8u1pWViZXcpNlAkRSWlqavIIhpO9TPwej4syZM//1X//1wx/+sLKyUj4T9qExvbdJ6gGYi6x/HQ5HeDdbV1f35Zdf3nTTTeoKpFOnTnv27Lns/54/f76kpGTmzJnXXHON+t87dOiwaNEijcpBXslstVr5SiAqcnJy5Pfc5/OFd8uBQGDTpk3XXnttyAm9qKioiVs4d+7c//zP/yxcuPCxxx7r3LlzyHb+8z//M4x763Q65WZdLpc+P6m4+vp6wjtgJnl5eZMnTxZCuN3uVg72l5aWPvroo7W1tTU1NSdOnAjpjZfi4uKuuuqqjh07XrRTp76+/tSpUw3vy52cnDxt2rTMzMyrr75ai0IoLy/v2bOnECI3NzcjI4NvBSLP7/d36NBB9oW8+OKLrdzasmXLZs2aVVtbW11dffz48WAweNE/69y5c6dOndq0aXPR39bW1lZVVZ05cyYQCDTyWuE9agYMGOByuWw2286dO/X5SZGEALMJBoPdu3f3eDwOhyMvL681m9qwYYPdbg/LXnXu3DklJcVqtQ4ePNhut991113t2rXTrhCeffbZ7Oxsq9V66NAhJgkhWubMmTN79mzZLdTKFa0WLVr0xBNPRGa3t23bduutt4ZlUyUlJUOHDhVCOJ3O9PR0khCACFG6hVpf/xq6LU6HEPgqRtc999xTXFys5w4hwYxpwJSUS1WffPLJGHz7s2bNkj+MGzeOLwOiKCkpSc5XmzFjhoFuCBguZWVlxcXFQohXX31Vz/tJEgJMyGKxyNma+fn52l3Eq9vKNzs7WwiRk5PDHTYQda+88ooQwuPxKAE9RgSDwSlTpgghbDbbyJEj9byrjI4Bpq2G5Gwhm822ffv2GJkrEwwGb731VpfLxQwh6Mfbb789ffp0EY6LGAxEGaN3uVxpaWl63lX6hABzslgsy5cvl9VQQUFBjLzrgoICuZTt8uXLiUHQiV/+8pdy8ffYGa71er0yBjkcDp3HIEGfEGBuGRkZ8obYlZWVKSkppq985XpFrb9oDggv5RKqnJycadOmmf79yonSwiAXbdAnBJjZwoULZWPUbrdfagEScwgGg/KCf6vV+tZbb/HRQ1fS09Pl1Onp06ebfure22+/LWNQbm6uIebqkYQAM0tKSlLGyGbMmGHidzpjxgxlXMz0vV8woiVLlshmyciRI018HVlZWZmcFOVwOIyycABJCDB/YzQrK0sIkZ2dXVRUZMr3WFRUJK8Xy8zM1O3qbYhxFotl8+bNQgiPxzN+/HhT9tF6vV55mZjVal2yZIlRdpskBJjfrFmz5MjRmDFjSkpKTPbuSkpKxowZI4Sw2Wzz5s3j44ZupaamyuUtiouL5dX1ZhIMBjMyMuRtjzdv3mygSxaYMQ3EBK/Xa7PZZCVlpkt5lVnSVqvV5XIxLgb9U65jCMv9yPQTg0aNGiWnBxUWFo4ePdpAO0+fEBATUlJS5Co7QojBgwd7vV7TxDtiEIxlyZIlso929uzZb7/9tjnelBKDsrKyjBWDSEJAbIUhOXtaLrdo9DCk7uViljQMxGKxrFmzRoah6dOnGz0MyUExJQYZsZeLJATEkIEDB77xxhtKGDLu1bxlZWVKDNLzPa6BS4Whf/zjH7KPdvr06XPmzDFuDBo1apQc7HM4HAYd7CMJAebn9/uLioruueeeDh06rF271ul0KmHIiBOoS0pKiEEwuqSkpEOHDinDZHPmzDHc1WR+v189KGbg5UzrAZiUz+crLCyUVa2isLCwvr7e7XbL9qgQIicnx0BvSl56I4SwWq1ut5tPGYYWCASUI9Rut/t8PqPsuTLvUMYgQ38KJCEgJgKQQqlqKysrlYrMEFWwz+dT3pTVaq2srOSzhjnCUGZmpvLFdrlcBmqQCCFyc3ON/hGQhICYCEBK4gn5F3kHAP1XweoGqLGazkBT5ObmKsdpTk5OIBAwRIPEELmNJAQQgEKHxhqpgh0Oh95ChjquGW4sD2g69Zi1zWbTYcjIzc01ZYOEJAQYVSAQkLfRaLpL1VzqKlhX3d3qmtc0DVCgkYNanfv10zJxu91y7S5TNkhIQoDh+Xw+t9tdWFiYm5vrcDgu1T8UMjTWsApWj/3bbDan0xnFLnqn0xlS8+p2vAAIL/VYsJyPHMU85Ha7Q8KZ+abokYQAE5J9Re3atbvs0FiIyspKda1ntVpzc3MjGUECgYC6H8isNS9w2QNB3TKJSh4KyUBWq7UpdQhJCIBeYpAQ4uabb27K0FhDIf0xVqs1KytL60vW3W53VlaWOgPJfik+UMQsn88XMgLucDi07qz1+Xy5ubkhNUCEW0QkIQBhiEF2u/3TTz9t4tBYU1qEMprk5OSENxK53e6cnBx1tSure9YKAi6Vh2QXkcvlCmM68fl8Tqcz5JA3fQYiCQFmjkGBQMDtdjdraOxSSSWkq0YJK7m5uW63u7m1pNwxOaUpZJuR6XwCDJqHCgsLQ9oM8mDPyclxuVwtGER2u91OpzMrK6vhZiPQ+aQfcfX19ax6DpjAnDlzZs+eLWvGNWvWWCyWYDDYpk0bZWgsKSmplfe4KCgoyM7OvuhvHQ5H3759+/TpozwzZMiQ0tJS5eH+/fu//vpreX+ihjIzMydNmsR9M4DL8nq9H3300dy5c+UNZxoGo5SUlLFjxyrP9OjR48yZM6dPn5YPT548WVpaumvXLpfL1fDfbTbbq6++OmzYsFZWF8ZCEgLMGYP+3xEeFyefXL9+fbheq7y8vLS0dPXq1ZeKNU1kt9unTp06ZMiQ1NRUPkGgBZHoiy++WLt2bUFBwUVTURPZbMf3ZbUAACAASURBVLaJEyeOGDFi4MCBMRWASEKA+WOQECIjIyM/P7+wsHD06NFavHR5eXlVVVVZWdmWLVu8Xq8QYuPGjSGVstVqHT58uBAiJSVl0KBBaWlpHTt2JP0AYeT3+71eb2lpqezyEUJctNdH9hgJIcaOHdu5c+d+/fp169ZNXWPEJpIQYNoYJIR49tlns7OzWz801lzBYPDWW2/dvn07lSwQ9SpixIgRDD03Ip4iAMwag4QQgwYNstvtke/xLigocLlcBQUFfEZAFPn9/tmzZz/99NMUBUkIiMUYJITo0aPHc889F+EdCwaDM2bMEELMmDEjGAzySQHRMm/ePCGEy+UqKSmhNC6F0THAtDFICOH1etu3bx/hPqG8vLzJkyfLn3NzczMyMvi8gMjz+/0dOnSQP9tstp07d1ImJCEgtmJQVASDwe7duyuTpq1W66FDh5gtBESxopCcTiezhS6K0TGAGBROIRf0ejweZgsBkSdnCKmfYbYQSQggBmlOmSGkxmwhIPLkDCE1ZguRhABikOYuusIb3UJAhDXsEJLoFiIJAcQgDV20Q0iiWwiIpIYdQhLdQiQhgBikoUaW/KdbCIiYS3UISXQLkYQAYpAmGnYIhdzdmm4hIDJCOoSsVqv6Id1CJCGAGKSJhh1CIfc8olsIiICQDiG73S4PTHUeoluIJAQQg8JM3SFktVrdbrfyK7fbrVTBdAsBWlN3COXk5Kxfv17+fOjQIYfDobRS6BYiCQHEoHBSOoQcDsehQ4fU95lPTU1VqmC6hQBNKR1CVqvV5XJNmzZN+ZXFYsnLy8vNzZUP6Rb6P+oB6E9WVpY8Qu12eyAQ0POuBgIB2euTm5urPNmwhpFVsNVq1fnbAYxeb9jtdp/PF3IwKg+Vblqn00mJSfQJAfQGtbZDSAjhdrsbv79YRkaGHDWjWwjQrkNIjog1cqtBpZuWbiEFSQggBrXKli1bQkbEGq+Ct2zZwmwhIOwWL14cMiJ2KXKkbObMmcwWkrgDK0AM0qBmiYuTP1DDAHo4GDkSG0GfEEAMAgCSEABiEACQhAAQgwCAJASAGAQAJCEAxCAAIAkBIAYBAEkIADEIAEhCAIhBAEASAkAMAgCSEABiEACQhAAQgwCAJASAGAQAJCEAxCAAIAkBxCBiEACQhABiEGUCACQhgBgEACAJAcQgAABJCCAGAQBIQsDF1dbWEoMAACQhxJyzZ88OGDCga9euxCAAQNhRR0PvXnjhBZfLJYSora1NSEggBgEAwiiuvr6eUoBubdq06e6775bf0mAwqPMkRAz635olLk7+QA0D6OFg5EgkCcGQzp8/P2DAgL1798qHOk9CxCCSEEASMiLmCUG/srKylBikc8QgADBqWCQnQp927Nhx++23B4NB5Rnd9gkRgy7VDKUlCujkYORIJAnBYGpra++4446Kiopjx47pPAkRg0hCAEnI0Bgdgx7Nnz9/165db7zxhs73kxgEACQhIMy+/fbb2bNn//73v+/Xrx8xCACgKUbHoDs/+tGPjh8/vn37dpfLddtttynP62p0jBh0mZqF0TFATwcjR2IjqL6hL++///6mTZtKS0vbtGmj250kBgGAaTA6Bh05evToCy+88Oyzz95xxx3EIAAASQixZdq0acnJyS+//DIxCAAQGdTj0IuVK1euXLly/fr17du3JwYBACKDPiHowunTp6dNmzZ16lS73U4MAgCQhBBbfv3rX9fV1c2bN48YBACIJCp0RN/GjRsXLVq0bNmy5ORkYhAAIJLoE0KUVVdXP/nkk+PGjXvwwQeJQQAAkhBiy+zZs48fP/7uu+8SgwAAkUfNjmjavn37/PnzFyxYcN111xGDAACRx902EDXBYPD222/v1KnTxo0blZszhOSkaN1tgxjU2pqFu20AejoYORIbQf2OqHnjjTe+/vprl8t10RgURcQgAIgdzBNCdOzbt2/OnDkvvfTS97//fWIQACBaGB1DFNTX1w8fPvzs2bNbt25tJGpEfnSMGBS2moXRMUBPByNHYiOo6BEFf/nLX0pKShqPQZFHDAKAGMToGCKtoqJi5syZM2bM+MEPfkAMAgCQhBBbnnnmmWuuueall14iBgEAoo4aHxG1bNmyf/7znx9//HG7du2IQQCAqKNPCJFz6tSp6dOnP/nkk3fffTcxCABAEkJsef755xMS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\" alt=\"[figure]\" width=\"193\" height=\"128\" style=\"max-width:100%;height:auto\"></p></div><p>Antag Dijkstras algoritme anvendes til at finde korteste afstande fra knuden \\(A\\) til alle knuder i grafen. Angiv i hvilken rækkefølge knuderne bliver taget ud af prioritetskøen i Dijkstras algoritme.</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Dijkstras algoritme (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "0"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<ul><li>Start: \\(d(A)=0\\), alle andre \\(\\infty\\).</li><li>Fra \\(A\\): \\(d(B)=4\\), \\(d(C)=1\\). Næste knude er \\(C\\) (mindst afstand).</li><li>Fra \\(C\\): \\(d(B)\\) forbedres til \\(1+1=2\\), \\(d(D)=1+4=5\\).</li><li>Næste knude er \\(B\\) (afstand \\(2\\)), som giver \\(d(E)=1+1+2=4\\).</li><li>Næste knude er \\(E\\) (afstand \\(4\\)).</li><li>Sidste knude er \\(D\\) (afstand \\(5\\)).</li></ul><p>Rækkefølgen er derfor \\(A,C,B,E,D\\).</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    },
+    {
+      "reference": "6fa9b1d2-e939-4167-8c0e-dfac65e2297e",
+      "title": "Rekursion (4%)",
+      "description": "",
+      "stimulus": " ",
+      "workflow": [],
+      "metadata": [],
+      "note": "",
+      "source": "",
+      "definition": {
+        "widgets": [
+          {
+            "reference": "929f1ff5-9d4d-42e4-9506-ab1a8f62d8b9",
+            "widget_type": "response"
+          }
+        ]
+      },
+      "status": "published",
+      "questions": [
+        {
+          "type": "mcq",
+          "widget_type": "response",
+          "reference": "929f1ff5-9d4d-42e4-9506-ab1a8f62d8b9",
+          "data": {
+            "minScore": 0,
+            "multiple_responses": true,
+            "options": [
+              {
+                "label": "\\(2^{n+1}-1\\)",
+                "value": "0"
+              },
+              {
+                "label": "\\(2n +1\\)",
+                "value": "1"
+              },
+              {
+                "label": "\\(3 \\cdot 2^{n}-1\\)",
+                "value": "2"
+              },
+              {
+                "label": "\\(2^{n}+n\\)",
+                "value": "3"
+              }
+            ],
+            "shuffle_options": false,
+            "stimulus": "<h3>Rekursion (4%)</h3><p>Betragt den følgende rekursion: \\[\\begin{aligned} T(0) &amp; = 1 \\\\ T(n) &amp; = 2T(n-1) + 1 \\quad \\text{for } n \\geq 1. \\end{aligned}\\] Hvilke af følgende funktioner løser rekursionen?</p><p>Der er præcis ét korrekt svar, men du må vælge flere.</p>",
+            "title": "Rekursion (4%)",
+            "type": "mcq",
+            "ui_style": {
+              "type": "horizontal",
+              "choice_label": "upper-alpha"
+            },
+            "validation": {
+              "allow_negative_scores": true,
+              "scoring_type": "partialMatch",
+              "valid_response": {
+                "score": 4,
+                "value": [
+                  "0"
+                ]
+              },
+              "penalty": 1.333
+            },
+            "is_math": true,
+            "metadata": {
+              "distractor_rationale": "<p>Vi har at \\(2^{0+1}-1 = 1\\), så \\(2^{n+1}-1\\) opfylder begyndelsesbetingelsen. Derudover ser vi at \\[\\begin{aligned} 2^{n+1}-1 = 2 \\cdot 2^{n} - 1 = 2 \\cdot \\left( 2^{n} - 1\\right) + 1, \\end{aligned}\\] som viser at funktionen opfylder rekursionen.</p>"
+            }
+          },
+          "metadata": {
+            "name": "Multiple-choice (blok layout)"
+          }
+        }
+      ],
+      "features": [],
+      "tags": [],
+      "labels": []
+    }
+  ],
+  "metadata": {
+    "author_version": "4.8.1",
+    "date_created": 1795772645,
+    "created_by": "latex2quiz",
+    "content": "item"
+  }
+}
