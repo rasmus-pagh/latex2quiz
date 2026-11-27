@@ -52,19 +52,38 @@
     overflow-wrap: anywhere; max-height: 360px; overflow: auto; margin: 0;
   }
   #downloads a { display: inline-block; margin: 8px 12px 0 0; color: var(--accent); font-weight: 600; }
+  .preview-head { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: space-between; align-items: baseline; }
+  .toggle { font-weight: 400; margin: 0; }
+  /* The problems are images of typeset LaTeX, black on white, so each one
+     sits on a white sheet in both colour schemes. */
+  .problem {
+    background: #ffffff; color: #1d1d1b; border: 1px solid var(--border); border-radius: 6px;
+    padding: 8px 12px 12px; margin-top: 12px; overflow-x: auto;
+  }
+  .problem img { display: block; max-width: 100%; height: auto; }
+  .choices { list-style: none; margin: 4px 0 0; padding: 0; }
+  .choices li { display: flex; align-items: center; gap: 4px; border-left: 4px solid transparent; }
+  .choices .tick { flex: 0 0 1.2em; text-align: center; font-weight: 700; color: #2d6a3e; visibility: hidden; }
+  .choices .number { flex: 0 0 1.6em; text-align: right; }
+  .choices img { flex: 0 1 auto; min-width: 0; }
+  .with-answers .choices li.correct { border-left-color: #2d6a3e; }
+  .with-answers .choices li.correct .tick { visibility: visible; }
+  .feedback { display: none; border-top: 1px solid #d9d9d2; margin-top: 8px; padding-top: 6px; }
+  .feedback strong { display: block; margin-left: 6px; }
+  .with-answers .feedback { display: block; }
 </style>
 </head>
 <body>
 <main>
   <h1>Exam converter</h1>
-  <p class="lede">Converts a LaTeX exam to a QTI package for Canvas or a WISEflow JSON item bank, entirely in your browser. Prototype.</p>
+  <p class="lede">Shows the problems of a LaTeX exam, or converts it to a QTI package for Canvas or a WISEflow JSON item bank, entirely in your browser. Prototype.</p>
 
   <section>
     <h2>1. Files</h2>
     <label for="files">Problem set and the files it uses</label>
     <input id="files" type="file" multiple accept=".tex,.pdf,.png,.jpg,.jpeg,.json">
     <p class="hint">Select the <code>.tex</code> file plus any figures it includes (e.g. <code>ad-problems-2024-april-figs.pdf</code>).</p>
-    <label for="main">Problem set to convert</label>
+    <label for="main">Problem set</label>
     <select id="main" disabled><option>No files selected</option></select>
   </section>
 
@@ -72,8 +91,9 @@
     <h2>2. Output</h2>
     <div class="row">
       <div>
-        <label for="format">Format</label>
+        <label for="format">Output</label>
         <select id="format">
+          <option value="preview" selected>Show the problems here</option>
           <option value="learnosity">WISEflow JSON</option>
           <option value="qti">QTI package for Canvas</option>
           <option value="both">Both</option>
@@ -89,7 +109,7 @@
     </div>
     <div class="actions">
       <button id="check" class="secondary" disabled>Check</button>
-      <button id="convert" disabled>Convert</button>
+      <button id="convert" disabled>Show</button>
     </div>
   </section>
 
@@ -98,6 +118,14 @@
     <p id="status">Loading Python…</p>
     <pre id="log"></pre>
     <div id="downloads"></div>
+  </section>
+
+  <section id="preview" hidden>
+    <div class="preview-head">
+      <h2>4. Problems</h2>
+      <label class="toggle"><input id="answers" type="checkbox" checked> Show answers</label>
+    </div>
+    <div id="problems" class="with-answers"></div>
   </section>
 </main>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"></script>

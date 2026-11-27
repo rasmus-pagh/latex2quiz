@@ -1,6 +1,7 @@
 // Browser front end for latex2quiz: the Python implementation runs unchanged
 // in Pyodide; LaTeX is compiled by BusyTeX (TeX Live in WebAssembly) in a
-// worker, and pdf.js turns the PDF pages into PNG images.
+// worker, and pdf.js turns the PDF pages into PNG images. The page either
+// shows the problems (the default) or offers the converted files for download.
 'use strict';
 
 const PYODIDE_INDEX = 'https://cdn.jsdelivr.net/pyodide/v0.27.2/full/';
@@ -230,16 +231,21 @@ async function rasterize(page, resolution) {
 
 // ------------------------------------------------------------------ commands
 
-// Run the command line, rendering documents for it until it finishes.
-async function runCommand(args) {
+// Call the Python bridge, rendering documents for it until it finishes.
+async function runBridge(call) {
   for (let round = 0; round < 3; round++) {
-    const proxy = bridge.run(args);
+    const proxy = call();
     const result = proxy.toJs({ dict_converter: Object.fromEntries });
     proxy.destroy();
     if (result.status === 'done') return result;
     await renderDocument(result);
   }
   throw new Error('Rendering did not converge');
+}
+
+// Run the command line.
+function runCommand(args) {
+  return runBridge(() => bridge.run(args));
 }
 
 function mainFile() {
@@ -269,11 +275,87 @@ async function check() {
   });
 }
 
-async function convert() {
+// ------------------------------------------------------- problems in the page
+
+const imageUrls = [];
+
+function clearProblems() {
+  for (const url of imageUrls.splice(0)) URL.revokeObjectURL(url);
+  $('problems').textContent = '';
+  $('preview').hidden = true;
+}
+
+function imageElement(image) {
+  const url = URL.createObjectURL(new Blob([pyodide.FS.readFile(image.path)], { type: 'image/png' }));
+  imageUrls.push(url);
+  const element = document.createElement('img');
+  element.src = url;
+  element.alt = image.alt;
+  element.width = image.width;
+  element.height = image.height;
+  return element;
+}
+
+// One sheet per problem: its text, its choices with the correct ones marked,
+// and its explanation. The marks and explanations are hidden by CSS unless
+// "Show answers" is on, so switching needs no new rendering.
+function showProblems(result) {
+  clearProblems();
+  for (const problem of result.problems) {
+    const sheet = document.createElement('article');
+    sheet.className = 'problem';
+    for (const part of problem.parts) sheet.append(imageElement(part));
+    if (problem.choices.length) {
+      const list = document.createElement('ol');
+      list.className = 'choices';
+      problem.choices.forEach((choice, index) => {
+        const item = document.createElement('li');
+        if (choice.correct) item.className = 'correct';
+        const tick = document.createElement('span');
+        tick.className = 'tick';
+        tick.textContent = '✓';
+        tick.title = 'Correct answer';
+        const number = document.createElement('span');
+        number.className = 'number';
+        number.textContent = `${index + 1}.`;
+        item.append(tick, number, imageElement(choice.image));
+        list.append(item);
+      });
+      sheet.append(list);
+    }
+    if (problem.feedback) {
+      const feedback = document.createElement('div');
+      feedback.className = 'feedback';
+      const label = document.createElement('strong');
+      label.textContent = result.answer_label;
+      feedback.append(label, imageElement(problem.feedback));
+      sheet.append(feedback);
+    }
+    $('problems').append(sheet);
+  }
+  $('preview').hidden = false;
+  $('preview').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+async function show() {
   const started = performance.now();
   await withBusy(async () => {
     writeUploads();
     $('downloads').textContent = '';
+    clearProblems();
+    const result = await runBridge(() => bridge.preview(mainFile(), $('language').value));
+    report(result, started);
+    if (result.code === 0) showProblems(result);
+  });
+}
+
+async function convert() {
+  if ($('format').value === 'preview') return show();
+  const started = performance.now();
+  await withBusy(async () => {
+    writeUploads();
+    $('downloads').textContent = '';
+    clearProblems();
     const input = mainFile();
     const result = await runCommand([input, '--format', $('format').value, '--language', $('language').value]);
     report(result, started);
@@ -322,10 +404,18 @@ $('files').addEventListener('change', async event => {
 
 $('check').addEventListener('click', check);
 $('convert').addEventListener('click', convert);
+// Browsers restore form fields on reload, so the labels follow the fields.
+function syncControls() {
+  $('convert').textContent = $('format').value === 'preview' ? 'Show' : 'Convert';
+  $('problems').classList.toggle('with-answers', $('answers').checked);
+}
+$('format').addEventListener('change', syncControls);
+$('answers').addEventListener('change', syncControls);
+syncControls();
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER;
 initPython().then(() => {
-  setStatus('Ready. Select the files to convert.');
+  setStatus('Ready. Select the files of a problem set.');
   if (uploaded.size) $('check').disabled = $('convert').disabled = false;
 }).catch(error => {
   setStatus('Python failed to load.', 'error');

@@ -175,10 +175,19 @@ python3 -m http.server 8000
 ```
 
 Select the problem set together with the files it uses (figure PDFs,
-`skriftlige.tex`), choose the format and language, and press **Check** or
-**Convert**. The output matches the command line: the QTI XML and the image
-sizes are identical, and the images differ only in anti-aliasing. Converting
-an AD exam takes about 5–10 seconds once TeX is loaded.
+`skriftlige.tex`), choose the output and language, and press **Check** or
+**Show**. By default the page shows the problems itself, one sheet per
+problem, typeset by LaTeX: the question, its choices, and the explanation.
+**Show answers** switches the marks on the correct choices and the
+explanations on and off without compiling again. This takes about 5 seconds
+for a whole exam once TeX is loaded.
+
+The other outputs are the QTI package and the WISEflow JSON; the button then
+reads **Convert** and the page offers the files for download. The output
+matches the command line: the QTI XML and the image sizes are identical, and
+the images differ only in anti-aliasing. Converting an AD exam takes about
+5–10 seconds, and a QTI conversion right after showing the problems reuses
+their images.
 
 The page loads only the small bundle, so the first conversion downloads about
 45 MB (mostly the 30 MB TeX engine); the browser caches it. If a document

@@ -1145,6 +1145,46 @@ class BrowserBridgeTests(unittest.TestCase):
         bank = json.loads(source.with_name("exam-learnosity.json").read_text(encoding="utf-8"))
         self.assertTrue(bank["data"])
 
+    def test_preview_lists_the_problems_with_their_images(self):
+        source = Path(self.temporary.name) / "exam.tex"
+        source.write_text(SAMPLE, encoding="utf-8")
+        folder = Path(self.temporary.name) / "preview"
+        first = self.web.preview(str(source), "en", 4.0, str(folder))
+        self.assertEqual("render", first["status"])
+        self.assertEqual([self.web.PREVIEW_DPI], first["resolutions"])
+        self.web.provide_pages(first["key"], 192, [_png(192, 96)] * first["pages"])
+        shown = self.web.preview(str(source), "en", 4.0, str(folder))
+        self.assertEqual(("done", 0), (shown["status"], shown["code"]))
+        self.assertEqual("Answer:", shown["answer_label"])
+        single, multiple, written = shown["problems"]
+        self.assertEqual(["single", "multiple", "written"], [p["kind"] for p in shown["problems"]])
+        self.assertEqual([False, True, False], [c["correct"] for c in single["choices"]])
+        self.assertEqual([True, False, True], [c["correct"] for c in multiple["choices"]])
+        self.assertIsNotNone(single["feedback"])
+        self.assertIsNone(multiple["feedback"])
+        self.assertEqual(2, len(written["parts"]))
+        self.assertIsNotNone(written["feedback"])
+        images = (
+            [part for p in shown["problems"] for part in p["parts"]]
+            + [c["image"] for p in shown["problems"] for c in p["choices"]]
+            + [p["feedback"] for p in shown["problems"] if p["feedback"]]
+        )
+        self.assertEqual(first["pages"], len(images))
+        for image in images:
+            self.assertTrue(Path(image["path"]).is_file())
+            self.assertEqual((96, 48), (image["width"], image["height"]))
+            self.assertTrue(image["alt"])
+        # The same images serve a QTI conversion: no second rendering.
+        converted = self.web.run([str(source), "--language", "en"])
+        self.assertEqual(("done", 0), (converted["status"], converted["code"]), converted)
+
+    def test_preview_reports_source_errors(self):
+        source = Path(self.temporary.name) / "broken.tex"
+        source.write_text("No questions here.", encoding="utf-8")
+        result = self.web.preview(str(source))
+        self.assertEqual(("done", 1), (result["status"], result["code"]))
+        self.assertIn("error:", result["stderr"])
+
     def test_check_and_usage_errors_finish_without_rendering(self):
         source = Path(self.temporary.name) / "exam.tex"
         source.write_text(SAMPLE, encoding="utf-8")
