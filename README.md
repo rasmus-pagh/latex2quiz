@@ -152,7 +152,9 @@ The repository includes the files the browser version needs, so it runs from
 GitHub Pages (Settings → Pages → deploy from the `main` branch, root folder)
 at `https://<user>.github.io/latex2quiz/`. Running `web/setup.py` is needed
 only to rebuild them, or to add the full TeX Live bundles for the fallback
-described below.
+described below. These files come from BusyTeX and TeX Live and keep their
+own licenses (LPPL, GPL, OFL and others); see
+[web/THIRD-PARTY-LICENSES.md](web/THIRD-PARTY-LICENSES.md).
 
 `web/` runs the converter entirely in the browser. The Python code runs
 unchanged in [Pyodide](https://pyodide.org); LaTeX is compiled by
@@ -423,3 +425,6 @@ The software is licensed under the MIT License, copyright Rasmus Pagh; see
 are copyright Mikkel Abrahamsen, Rasmus Pagh and Amir Yehudayoff, and those in
 `dma-exams/` are copyright Mikkel Abrahamsen and Rasmus Pagh. See the LICENSE
 file in each folder.
+The browser version includes third-party software (BusyTeX and TeX Live
+files) under its own licenses, listed in
+[web/THIRD-PARTY-LICENSES.md](web/THIRD-PARTY-LICENSES.md).
