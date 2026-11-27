@@ -425,6 +425,7 @@ The software is licensed under the MIT License, copyright Rasmus Pagh; see
 are copyright Mikkel Abrahamsen, Rasmus Pagh and Amir Yehudayoff, and those in
 `dma-exams/` are copyright Mikkel Abrahamsen and Rasmus Pagh. See the LICENSE
 file in each folder.
+
 The browser version includes third-party software (BusyTeX and TeX Live
 files) under its own licenses, listed in
 [web/THIRD-PARTY-LICENSES.md](web/THIRD-PARTY-LICENSES.md).
