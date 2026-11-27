@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT. Copyright (c) 2026 Rasmus Pagh.
 // Browser front end for latex2quiz: the Python implementation runs unchanged
 // in Pyodide; LaTeX is compiled by BusyTeX (TeX Live in WebAssembly) in a
 // worker, and pdf.js turns the PDF pages into PNG images. The page shows the
@@ -329,7 +330,7 @@ function showProblems(result) {
 
 // The status panel is shown while the page works and when something fails;
 // once the problems are shown it is hidden again.
-const CONTROLS = ['files', 'main', 'language', 'export-qti', 'export-wiseflow'];
+const CONTROLS = ['files', 'main', 'export-qti', 'export-wiseflow'];
 
 async function withBusy(action) {
   for (const id of CONTROLS) $(id).disabled = true;
@@ -350,7 +351,7 @@ async function show() {
   await withBusy(async () => {
     try {
       writeUploads();
-      const result = await runBridge(() => bridge.preview(mainFile(), $('language').value));
+      const result = await runBridge(() => bridge.preview(mainFile(), language));
       if (result.code !== 0) {
         setStatus('The problem set could not be shown:', 'error');
         log((result.stderr || '') + (result.stdout || ''));
@@ -384,7 +385,7 @@ async function exportAs(format) {
     try {
       writeUploads();
       const input = mainFile();
-      const result = await runCommand([input, '--format', format, '--language', $('language').value]);
+      const result = await runCommand([input, '--format', format, '--language', language]);
       if (result.code !== 0) throw new Error((result.stderr || '') + (result.stdout || ''));
       const path = input.replace(/\.tex$/, '') + suffix;
       const link = document.createElement('a');
@@ -407,8 +408,10 @@ async function exportAs(format) {
 
 // The problem set is the .tex file with the multiple-choice section; the
 // other .tex files are ones it includes. The chooser appears only if several
-// files qualify. The language follows the macro names unless changed.
+// files qualify. The language of the instructions and labels follows the
+// macro names: English names (\question, ...) give English.
 const PROBLEM_SET = /^[ \t]*\\multiplechoicestart\b/m;
+let language = 'da';
 const ENGLISH = /\\(question|multiplechoiceend|optionsstart)\b/;
 
 function chooseProblemSet() {
@@ -427,7 +430,7 @@ function chooseProblemSet() {
 
 function detectLanguage(sources) {
   const source = sources.get($('main').value);
-  if (source !== undefined) $('language').value = ENGLISH.test(source) ? 'en' : 'da';
+  if (source !== undefined) language = ENGLISH.test(source) ? 'en' : 'da';
 }
 
 $('files').addEventListener('change', async event => {
@@ -448,7 +451,6 @@ $('main').addEventListener('change', () => {
   detectLanguage(new Map([[$('main').value, new TextDecoder().decode(uploaded.get($('main').value))]]));
   show();
 });
-$('language').addEventListener('change', show);
 $('export-qti').addEventListener('click', () => exportAs('qti'));
 $('export-wiseflow').addEventListener('click', () => exportAs('learnosity'));
 // Browsers restore form fields on reload, so the display follows the fields.

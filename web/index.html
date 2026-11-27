@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- SPDX-License-Identifier: MIT. Copyright (c) 2026 Rasmus Pagh. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -53,6 +54,8 @@
     font: 12.5px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap;
     overflow-wrap: anywhere; max-height: 360px; overflow: auto; margin: 0;
   }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 0.875rem; text-align: center; margin-top: 24px; }
   #downloads a { display: inline-block; margin: 8px 12px 0 0; color: var(--accent); font-weight: 600; }
   .preview-head { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: space-between; align-items: baseline; }
   .toggle { font-weight: 400; margin: 0; }
@@ -85,18 +88,10 @@
     <label for="files">Problem set and the files it uses</label>
     <input id="files" type="file" multiple accept=".tex,.pdf,.png,.jpg,.jpeg">
     <p class="hint">Select the problem set's <code>.tex</code> file plus any files it includes, such as figures (<code>ad-problems-2024-april-figs.pdf</code>) or <code>skriftlige.tex</code>.</p>
-    <div class="row">
-      <div id="main-choice" hidden>
-        <label for="main">Problem set</label>
-        <select id="main"></select>
-      </div>
-      <div>
-        <label for="language">Language</label>
-        <select id="language">
-          <option value="da">Danish</option>
-          <option value="en">English</option>
-        </select>
-      </div>
+    <p class="hint">The problems are written in the LaTeX format described in the <a href="https://github.com/rasmus-pagh/latex2quiz#authoring-format">documentation</a>, with Danish or <a href="https://github.com/rasmus-pagh/latex2quiz#english-macro-names">English macro names</a>; the language of the instructions follows the macro names.</p>
+    <div id="main-choice" hidden>
+      <label for="main">Problem set</label>
+      <select id="main"></select>
     </div>
   </section>
 
@@ -117,6 +112,12 @@
     </div>
     <div id="problems" class="with-answers"></div>
   </section>
+  <footer>
+    <a href="https://github.com/rasmus-pagh/latex2quiz">latex2quiz</a> · © 2026 Rasmus Pagh ·
+    <a href="https://github.com/rasmus-pagh/latex2quiz/blob/main/LICENSE">MIT License</a> ·
+    <a href="https://github.com/rasmus-pagh/latex2quiz#authoring-format">LaTeX format</a> ·
+    <a href="https://github.com/rasmus-pagh/latex2quiz#browser-version-prototype">About this page</a>
+  </footer>
 </main>
 <script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>

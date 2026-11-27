@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT. Copyright (c) 2026 Rasmus Pagh.
 """Run the latex2quiz command line in the browser (Pyodide).
 
 Everything except LaTeX rendering is the unchanged Python implementation.

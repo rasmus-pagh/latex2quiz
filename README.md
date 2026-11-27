@@ -177,7 +177,8 @@ python3 -m http.server 8000
 Select the problem set together with the files it uses (figure PDFs,
 `skriftlige.tex`). The page finds the problem set among them (the `.tex` file
 with `\multiplechoicestart`; a chooser appears only if several files have
-one), guesses the language from the macro names, and shows the problems right
+one), takes the language of the instructions from the macro names (English
+names give English), and shows the problems right
 away, one sheet per problem, typeset by LaTeX: the question, its choices and
 the explanation. **Show answers** switches the marks on the correct choices
 and the explanations on and off without compiling again. A whole exam takes
