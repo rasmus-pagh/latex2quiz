@@ -63,6 +63,6 @@ and Stein, *Introduction to Algorithms* (CLRS).
 
 ## License
 
-Copyright (c) 2026 Mikkel Abrahamsen, Rasmus Pagh, Amir Yehudayoff.
+Copyright (c) 2026 Mikkel Abrahamsen, Rasmus Pagh.
 The problems are licensed under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see [LICENSE](LICENSE).

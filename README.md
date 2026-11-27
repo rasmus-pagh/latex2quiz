@@ -379,7 +379,8 @@ remain platform settings and are not inferred from the LaTeX document.
 ## License
 
 The software is licensed under the MIT License, copyright Rasmus Pagh; see
-[LICENSE](LICENSE). The exam problems in `ad-exams/` and `dma-exams/` are
-copyright Mikkel Abrahamsen, Rasmus Pagh and Amir Yehudayoff and licensed under
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see the LICENSE file
-in each folder.
+[LICENSE](LICENSE). The exam problems are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): those in `ad-exams/`
+are copyright Mikkel Abrahamsen, Rasmus Pagh and Amir Yehudayoff, and those in
+`dma-exams/` are copyright Mikkel Abrahamsen and Rasmus Pagh. See the LICENSE
+file in each folder.
