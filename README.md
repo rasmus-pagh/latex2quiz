@@ -148,6 +148,12 @@ export at every nesting level, which is informational.
 
 ## Browser version (prototype)
 
+The repository includes the files the browser version needs, so it runs from
+GitHub Pages (Settings → Pages → deploy from the `main` branch, root folder)
+at `https://<user>.github.io/latex2quiz/`. Running `web/setup.py` is needed
+only to rebuild them, or to add the full TeX Live bundles for the fallback
+described below.
+
 `web/` runs the converter entirely in the browser. The Python code runs
 unchanged in [Pyodide](https://pyodide.org); LaTeX is compiled by
 [BusyTeX](https://github.com/busytex/busytex) (TeX Live 2023 compiled to
